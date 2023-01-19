@@ -1,0 +1,87 @@
+@import "../../scss/variables.scss";
+
+.first {
+  display: flex;
+  align-items: center;
+
+  background: rgba(30, 30, 30, 0.3);
+  width: 100%;
+}
+
+.menue {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  height: 0.3rem;
+  width: 2rem;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0.3rem;
+    width: 2rem;
+    background: white;
+  }
+  &::after {
+    transform: translateY(-10px);
+  }
+  &::before {
+    transform: translateY(10px);
+  }
+}
+
+.Navigationbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-text {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    transform: translateX(-20px);
+
+    &-1 {
+      font-family: "Nunito";
+      color: white;
+    }
+    &-2 {
+      color: $color_primary;
+      font-family: "Londrina Solid";
+    }
+  }
+  &-login-button {
+    width: 150px;
+    height: 60px;
+    margin-right: 2rem;
+    border-radius: 50px;
+    border: 4px solid $color_secondary;
+    background-color: transparent;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    .Navigationbar {
+      &-logo {
+        display: none;
+      }
+      &-text {
+        display: none;
+      }
+      &-login-button {
+        display: none;
+      }
+    }
+  }
+}
