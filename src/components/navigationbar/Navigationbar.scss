@@ -3,32 +3,40 @@
 .first {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 0;
 
   background: rgba(30, 30, 30, 0.3);
   width: 100%;
 }
 
 .menue {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-left: 2.5rem;
-  margin-right: 2.5rem;
-  height: 0.3rem;
-  width: 2rem;
-  background: white;
   cursor: pointer;
-  position: relative;
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
+  &-style {
     height: 0.3rem;
     width: 2rem;
     background: white;
-  }
-  &::after {
-    transform: translateY(-10px);
-  }
-  &::before {
-    transform: translateY(10px);
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 0.3rem;
+      width: 2rem;
+      background: white;
+    }
+    &::after {
+      transform: translateY(-10px);
+    }
+    &::before {
+      transform: translateY(10px);
+    }
   }
 }
 
@@ -37,6 +45,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &-logo {
+    margin-left: 2.5rem;
+  }
 
   &-text {
     display: flex;
@@ -74,13 +85,13 @@
   @media only screen and (max-width: $bp-medium) {
     .Navigationbar {
       &-logo {
-        display: none;
+        scale: 0.7;
       }
       &-text {
         display: none;
       }
       &-login-button {
-        display: none;
+        scale: 0.7;
       }
     }
   }
