@@ -39,6 +39,7 @@
         line-height: 52px;
         color: white;
         padding: 0.8rem;
+        border: 4px solid transparent;
 
         @media only screen and (max-width: $bp-large) {
           font-weight: 400;
