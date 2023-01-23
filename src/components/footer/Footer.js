@@ -1,7 +1,7 @@
 import React from "react";
-
 import { Icon } from "@iconify/react";
-import logo from "../../assets/logo.png";
+
+import logo from "../../assets/Logo.png";
 import AppStore from "../../assets/AppStore.png";
 import GooglePlay from "../../assets/GooglePlay.png";
 import { InstagramSvg, FacebookSvg, TiktokSvg } from "../../assets/svg";
@@ -10,6 +10,7 @@ const Footer = () => {
   const clickedImg = () => {
     console.log("clicked on img");
   };
+
   return (
     <div className="footer">
       <div className="footer-top">
@@ -19,13 +20,13 @@ const Footer = () => {
             className="footer-top-left-img"
             src={AppStore}
             alt="Aple store"
-            onClick={(e) => clickedImg(e)}
+            onClick={() => clickedImg()}
           />
           <img
             className="footer-top-left-img"
             src={GooglePlay}
             alt="Google store"
-            onClick={(e) => clickedImg(e)}
+            onClick={() => clickedImg()}
           />
         </div>
 

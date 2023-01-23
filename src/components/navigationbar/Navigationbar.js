@@ -1,12 +1,12 @@
 import React from "react";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo.png";
 
 const Navigationbar = ({ showSidbar }) => {
   return (
     <>
       <div className="first">
-        <div className="menue" onClick={() => showSidbar()}>
+        <div className="menue" onClick={showSidbar}>
           <div className="menue-style"></div>
         </div>
         <div className="Navigationbar">
