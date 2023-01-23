@@ -5,11 +5,7 @@ import HomePage from "./pages/HomePage";
 import stylesheet from "./scss/stylesheet";
 
 function App() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;

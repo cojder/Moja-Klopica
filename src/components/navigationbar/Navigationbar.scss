@@ -3,10 +3,10 @@
 .first {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 0;
+  justify-self: flex-start;
   background: rgba(30, 30, 30, 0.3);
   width: 100%;
+  z-index: 1;
 }
 
 .menue {

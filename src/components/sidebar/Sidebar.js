@@ -3,7 +3,6 @@ import React from "react";
 const Sidebar = ({ onBackdropClick }) => {
   return (
     <div className="sidebar">
-      <div className="sidebar-close" onClick={onBackdropClick} />
       <div className="sidebar-open">
         <ul>
           <li className="sidebar-open-element">
@@ -23,6 +22,7 @@ const Sidebar = ({ onBackdropClick }) => {
           </li>
         </ul>
       </div>
+      <div className="sidebar-close" onClick={onBackdropClick} />
     </div>
   );
 };

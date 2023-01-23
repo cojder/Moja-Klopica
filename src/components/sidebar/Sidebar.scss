@@ -2,16 +2,18 @@
 
 .sidebar {
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   &-close {
-    width: 100%;
+    width: 73vw;
     height: 100vh;
   }
 
   &-open {
-    position: absolute;
-    width: 27%;
+    width: 27vw;
     height: 100vh;
     background: rgba(47, 3, 3, 0.94);
     z-index: 1;
