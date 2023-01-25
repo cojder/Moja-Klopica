@@ -1,0 +1,39 @@
+@import "../../scss/variables.scss";
+
+.searchbar {
+  padding: 1rem;
+  &-field {
+    height: 60px;
+    width: 500px;
+    display: flex;
+    background-color: white;
+    border: 2px solid $color_primary;
+    border-radius: 40px;
+
+    &-input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 27px;
+      color: rgba(30, 30, 30, 0.5);
+      margin-left: 0.5rem;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+    &-icon {
+      &-left {
+        scale: 1.05;
+      }
+      &-right {
+        scale: 0.9;
+      }
+    }
+  }
+}
