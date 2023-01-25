@@ -53,3 +53,45 @@ export const TiktokSvg = () => {
     </svg>
   );
 };
+
+export const ArrowLeft = () => {
+  return (
+    <svg
+      className="Arrow"
+      width="9"
+      height="15"
+      viewBox="0 0 9 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.33325 13.6667L0.999919 7.33335L7.33325 1.00002"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ArrowRight = () => {
+  return (
+    <svg
+      className="Arrow"
+      width="9"
+      height="15"
+      viewBox="0 0 9 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L7.33333 7.33333L1 13.6667"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

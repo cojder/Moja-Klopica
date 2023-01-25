@@ -5,6 +5,7 @@ import "../components/sidebar/Sidebar.scss";
 import "../components/header/Header.scss";
 import "../components/searchbar/Searchbar.scss";
 import "../components/slider/Slider.scss";
+import "../components/restourantCard/RestourantCard.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";
