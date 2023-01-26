@@ -1,0 +1,51 @@
+@import "../../scss/variables.scss";
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  &-name {
+    border-bottom: 1px solid $color_secondary;
+  }
+
+  &-body {
+    border-bottom: 1px solid $color_secondary;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  &-sum {
+    border-top: 1px solid $color_secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button-small {
+  border: 1px solid $color_primary;
+  padding: 5px 8px;
+  background-color: transparent;
+}

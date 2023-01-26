@@ -1,0 +1,54 @@
+@import "../../scss/variables.scss";
+
+.meni {
+  display: flex;
+  position: relative;
+  top: -120px;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 1rem;
+  &-left {
+    border-radius: 30px;
+    box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    display: flex;
+    &-sidebar {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: #333333;
+
+      &-list {
+        margin-left: 2rem;
+
+        li {
+          margin-top: 2rem;
+          list-style: none;
+          padding: 0.8rem;
+          border: 4px solid transparent;
+
+          &:hover,
+          &:active {
+            cursor: pointer;
+            border-radius: 40px;
+            border: 4px solid $color_secondary;
+          }
+        }
+      }
+    }
+    &-element {
+    }
+  }
+
+  &-right {
+    border-radius: 30px;
+    box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
+    width: 20%;
+    height: 100%;
+  }
+}

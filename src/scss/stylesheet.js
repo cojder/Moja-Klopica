@@ -6,6 +6,12 @@ import "../components/header/Header.scss";
 import "../components/searchbar/Searchbar.scss";
 import "../components/slider/Slider.scss";
 import "../components/restourantCard/RestourantCard.scss";
+import "../components/restourantInfo/RestourantInfo.scss";
+import "../components/restourantNavBar/RestourantNavBar.scss";
+import "../components/restourant/Restourant.scss";
+import "../components/meni/Meni.scss";
+import "../components/meniElement/MeniElement.scss";
+import "../components/calculator/Calculator.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

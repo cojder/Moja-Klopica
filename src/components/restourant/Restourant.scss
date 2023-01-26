@@ -1,0 +1,38 @@
+@import "../../scss/variables.scss";
+
+.restourant {
+  position: relative;
+  top: -120px;
+  width: 90%;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  &-left {
+    width: 50%;
+    margin: 2.5rem;
+  }
+  &-right {
+    &-name {
+      color: $color_primary;
+      font-weight: 600;
+    }
+    &-location {
+      margin-top: 1rem;
+    }
+    &-phone {
+    }
+    &-img {
+      margin-top: 1rem;
+    }
+  }
+}
