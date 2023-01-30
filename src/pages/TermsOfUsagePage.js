@@ -5,7 +5,7 @@ import MoreInfoHeader from "../components/moreInfoHeader/MoreInfoHeader";
 import Navigationbar from "../components/navigationbar/Navigationbar";
 import Sidebar from "../components/sidebar/Sidebar";
 
-const PrivacyPolicyPage = () => {
+const TermsOfUsagePaga = () => {
   const [sidebar, setSidebar] = useState(false);
   return (
     <div className="more-info">
@@ -18,4 +18,4 @@ const PrivacyPolicyPage = () => {
   );
 };
 
-export default PrivacyPolicyPage;
+export default TermsOfUsagePaga;

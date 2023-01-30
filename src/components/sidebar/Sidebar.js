@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import { ABOUT_RESTOURANT } from "../../constants/paths";
+import {
+  ABOUT_RESTOURANT,
+  GALERY,
+  IMPRESSIONS,
+  MENI,
+} from "../../constants/paths";
 
-const Sidebar = ({ setShowComponent, onBackdropClick }) => {
-  console.log(setShowComponent);
+const Sidebar = ({ onBackdropClick }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-open">
@@ -13,45 +16,16 @@ const Sidebar = ({ setShowComponent, onBackdropClick }) => {
             <a href="/">POČETNA</a>
           </li>
           <li className="sidebar-open-element">
-            <a
-              onClick={() => setShowComponent("aboutRestourant")}
-              href={`${ABOUT_RESTOURANT}/:id`}
-            >
-              O RESTORANU
-            </a>
+            <a href={`${ABOUT_RESTOURANT}/:id`}>O RESTORANU</a>
           </li>
           <li className="sidebar-open-element">
-            <a
-              onClick={(e) => {
-                setShowComponent("meni");
-                e.preventDefault();
-              }}
-            >
-              <Link to={`${ABOUT_RESTOURANT}/:id/meni`}></Link>
-              MENI
-            </a>
+            <a href={`${MENI}/:id`}>MENI</a>
           </li>
           <li className="sidebar-open-element">
-            <a
-              onClick={(e) => {
-                setShowComponent("impressions");
-                e.preventDefault();
-              }}
-              href={`${ABOUT_RESTOURANT}/:id`}
-            >
-              UTISCI
-            </a>
+            <a href={`${IMPRESSIONS}/:id`}>UTISCI</a>
           </li>
           <li className="sidebar-open-element">
-            <a
-              onClick={(e) => {
-                setShowComponent("galery");
-                e.preventDefault();
-              }}
-              href={`${ABOUT_RESTOURANT}/:id`}
-            >
-              GALERIJA
-            </a>
+            <a href={`${GALERY}/:id`}>GALERIJA</a>
           </li>
         </ul>
       </div>

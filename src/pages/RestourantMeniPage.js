@@ -6,9 +6,9 @@ import Slider from "../components/slider/Slider";
 import Sidebar from "../components/sidebar/Sidebar";
 import RestourantInfo from "../components/restourantInfo/RestourantInfo";
 import RestourantNavBar from "../components/restourantNavBar/RestourantNavBar";
-import Restourant from "../components/restourant/Restourant";
+import Meni from "../components/meni/Meni";
 
-const AboutRestourantPage = () => {
+const RestourantMeniPage = () => {
   const [sideBar, setSidebar] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const AboutRestourantPage = () => {
       <Navigationbar showSidbar={() => setSidebar(true)} />
       <RestourantInfo />
       <RestourantNavBar />
-      <Restourant />
+      <Meni />
       <Slider />
       <Footer />
       {sideBar && <Sidebar onBackdropClick={() => setSidebar(false)} />}
@@ -24,4 +24,4 @@ const AboutRestourantPage = () => {
   );
 };
 
-export default AboutRestourantPage;
+export default RestourantMeniPage;

@@ -5,7 +5,7 @@ import Background from "../../assets/BackGroundTop.png";
 const MoreInfoHeader = () => {
   return (
     <div className="header-info">
-      <img className="header-info-img" src={Background} />
+      <img className="header-info-img" src={Background} alt="pozadina" />
 
       <div className="header-info-elements">
         <div className="header-info-elements-header">MOJA KLOPICA</div>
