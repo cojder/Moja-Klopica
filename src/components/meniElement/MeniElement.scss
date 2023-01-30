@@ -1,0 +1,35 @@
+@import "../../scss/variables.scss";
+
+.meni-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5rem;
+  &-top {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &-name {
+      color: #333333;
+    }
+
+    &-price {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_primary;
+    }
+  }
+  &-bottom {
+    border-top: 4px solid $color_primary;
+    justify-content: space-between;
+  }
+}

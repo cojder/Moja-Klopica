@@ -1,0 +1,40 @@
+.meni-item {
+  display: flex;
+  justify-content: space-between;
+
+  &-img {
+    margin: 1rem;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+    width: 100%;
+
+    font-family: "Poppins";
+    font-style: normal;
+
+    font-size: 24px;
+    line-height: 36px;
+    color: #333333;
+
+    &-name {
+      font-weight: 400;
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 3rem;
+      &-amount {
+        font-weight: 275;
+      }
+
+      &-pieces {
+        display: flex;
+        font-weight: 400;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 import logo from "../../assets/Logo.png";
+import Searchbar from "../searchbar/Searchbar";
 
 const Navigationbar = ({ showSidbar }) => {
   return (
@@ -11,10 +12,14 @@ const Navigationbar = ({ showSidbar }) => {
         </div>
         <div className="Navigationbar">
           <img className="Navigationbar-logo" src={logo} alt="logo" />
-          <div className="Navigationbar-text">
-            <h5 className="Navigationbar-text-1">Saznaj gde je najbliža </h5>
-            <h5 className="Navigationbar-text-2"> TVOJA KLOPICA</h5>
-          </div>
+          {window.location.pathname === "/" ? (
+            <div className="Navigationbar-text">
+              <h5 className="Navigationbar-text-1">Saznaj gde je najbliža </h5>
+              <h5 className="Navigationbar-text-2"> TVOJA KLOPICA</h5>
+            </div>
+          ) : (
+            <Searchbar />
+          )}
           <button className="Navigationbar-login-button">Ulogujte se</button>
         </div>
       </div>
