@@ -1,0 +1,59 @@
+@import "../../scss/variables.scss";
+
+.more-info-body {
+  align-self: center;
+  position: relative;
+  top: -120px;
+  margin-top: 2rem;
+  display: flex;
+  width: 90%;
+  height: 100%;
+  gap: 1rem;
+  border-radius: 30px;
+  box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
+  &-left {
+    width: 30%;
+
+    margin-top: 5rem;
+    &-button {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 33px;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      button {
+        margin: 5rem 0 2rem 2rem;
+        border: 4px solid transparent;
+        border-radius: 30px;
+        transition: 0.3s;
+        padding: 1rem;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000000;
+        background-color: white;
+
+        &:hover,
+        &:active,
+        &:focus {
+          padding: 1rem;
+          border: 4px solid $color_primary;
+          box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+
+  &-right {
+    height: 100%;
+    width: 70%;
+  }
+}

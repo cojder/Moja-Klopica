@@ -17,6 +17,11 @@ import "../components/meniItem/MeniItem.scss";
 import "../components/impressions/Impressions.scss";
 import "../components/galery/Galery.scss";
 import "../components/galeryCard/GaleryCard.scss";
+import "../components/moreInfoHeader/MoreInfoHeader.scss";
+import "../components/moreInfoBody/MoreInfoBody.scss";
+import "../components/faq/FAQ.scss";
+import "../components/privacy/Privacy.scss";
+import "../components/terms/Terms.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

@@ -4,12 +4,12 @@ import Background from "../../assets/BackGroundTop.png";
 
 const MoreInfoHeader = () => {
   return (
-    <div className="header">
-      <img className="header-img" src={Background} />
+    <div className="header-info">
+      <img className="header-info-img" src={Background} />
 
-      <div className="header-elements">
-        <div className="header-elements-header">MOJA KLOPICA</div>
-        <div className="header-elements-text">dodatne informacije</div>
+      <div className="header-info-elements">
+        <div className="header-info-elements-header">MOJA KLOPICA</div>
+        <div className="header-info-elements-text">dodatne informacije</div>
       </div>
     </div>
   );

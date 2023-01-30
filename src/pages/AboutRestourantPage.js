@@ -10,10 +10,13 @@ import Restourant from "../components/restourant/Restourant";
 import Meni from "../components/meni/Meni";
 import Impressions from "../components/impressions/Impressions";
 import Galery from "../components/galery/Galery";
+import { ABOUT_RESTOURANT } from "../constants/paths";
 
 const AboutRestourantPage = () => {
   const [showComponent, setShowComponent] = useState("aboutRestourant");
   const [sideBar, setSidebar] = useState(false);
+
+  console.log(showComponent);
 
   return (
     <div className="about-restourant">
@@ -21,12 +24,18 @@ const AboutRestourantPage = () => {
       <RestourantInfo />
       <RestourantNavBar setShowComponent={setShowComponent} />
       {showComponent === "aboutRestourant" && <Restourant />}
+      {window.location.pathname === `${ABOUT_RESTOURANT}/:id/meni` && <Meni />}
       {showComponent === "meni" && <Meni />}
       {showComponent === "impressions" && <Impressions />}
       {showComponent === "galery" && <Galery />}
       <Slider />
       <Footer />
-      {sideBar && <Sidebar onBackdropClick={() => setSidebar(false)} />}
+      {sideBar && (
+        <Sidebar
+          setShowComponent={setShowComponent}
+          onBackdropClick={() => setSidebar(false)}
+        />
+      )}
     </div>
   );
 };

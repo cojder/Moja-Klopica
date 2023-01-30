@@ -1,0 +1,25 @@
+@import "../../scss/variables.scss";
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+  &-name {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: $color_primary;
+  }
+
+  &-text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+  }
+}
