@@ -11,10 +11,9 @@
     height: 100%;
     width: 100%;
   }
-
   &-elements {
-    position: absolute;
-    top: 20%;
+    display: flex;
+
     margin-left: 4rem;
 
     &-header {

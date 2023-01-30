@@ -12,6 +12,11 @@ import "../components/restourant/Restourant.scss";
 import "../components/meni/Meni.scss";
 import "../components/meniElement/MeniElement.scss";
 import "../components/calculator/Calculator.scss";
+import "../components/meniElement/MeniElement.scss";
+import "../components/meniItem/MeniItem.scss";
+import "../components/impressions/Impressions.scss";
+import "../components/galery/Galery.scss";
+import "../components/galeryCard/GaleryCard.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

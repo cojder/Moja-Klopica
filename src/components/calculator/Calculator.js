@@ -9,12 +9,12 @@ const Calculator = () => {
       <div className="calculator-body">
         <div className="calculator-body-top">
           <div>ime jela</div>
-          <button>close</button>
+          <button className="button-close">X</button>
         </div>
         <div className="calculator-body-bottom">
           <div className="calculator-body-bottom-right">
             <button className="button-small">+</button>
-            <div>jedinica</div>
+            <div>2</div>
             <button className="button-small">-</button>
           </div>
           <div>cena</div>

@@ -1,0 +1,27 @@
+.galery {
+  position: relative;
+  top: -120px;
+  display: flex;
+  align-items: center;
+  &-arrow {
+    &-left {
+      cursor: pointer;
+      position: absolute;
+      left: 2%;
+      z-index: 1;
+    }
+    &-right {
+      cursor: pointer;
+      position: absolute;
+      right: 2%;
+      z-index: 1;
+    }
+  }
+  &-element {
+    display: flex;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
