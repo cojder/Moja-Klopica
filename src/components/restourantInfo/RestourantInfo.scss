@@ -82,8 +82,13 @@
       gap: 1rem;
       list-style: none;
       color: #8a8a8a;
-      &-green {
-        color: #00872f;
+      &-text {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        &-green {
+          color: #00872f;
+        }
       }
     }
   }

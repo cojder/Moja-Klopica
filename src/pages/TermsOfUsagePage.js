@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/footer/Footer";
-import MoreInfoBody from "../components/moreInfoBody/MoreInfoBody";
+import MoreInfoBodyTerms from "../components/moreInfoBody/MoreInfoTermsOfUsage";
 import MoreInfoHeader from "../components/moreInfoHeader/MoreInfoHeader";
 import Navigationbar from "../components/navigationbar/Navigationbar";
 import Sidebar from "../components/sidebar/Sidebar";
@@ -11,7 +11,7 @@ const TermsOfUsagePaga = () => {
     <div className="more-info">
       <Navigationbar showSidbar={() => setSidebar(true)} />
       <MoreInfoHeader />
-      <MoreInfoBody />
+      <MoreInfoBodyTerms />
       <Footer />
       {sidebar && <Sidebar onBackdropClick={() => setSidebar(false)} />}
     </div>

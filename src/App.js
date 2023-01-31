@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import AboutRestourantPage from "./pages/AboutRestourantPage";
 import HomePage from "./pages/HomePage";
-import MoreInfoPage from "./pages/MoreInfoPage";
 import RestourantMeniPage from "./pages/RestourantMeniPage";
 import RestourantImpressionsPage from "./pages/RestourantImpressionsPage";
 import RestourantGaleryPage from "./pages/RestourantGaleryPage";
@@ -16,6 +15,9 @@ import {
   PRIVACY_POLICY,
   TERMS_OF_USAEGE,
 } from "./constants/paths";
+import FAQPage from "./pages/FAQPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfUsagePaga from "./pages/TermsOfUsagePage";
 // eslint-disable-next-line no-unused-vars
 import stylesheet from "./scss/stylesheet";
 
@@ -35,12 +37,9 @@ function App() {
         />
         <Route path={`${GALERY}/:id`} element={<RestourantGaleryPage />} />
 
-        <Route
-          path={`${FREQUENTLY_ASKED_QUESTIONS}`}
-          element={<MoreInfoPage />}
-        />
-        <Route path={`${PRIVACY_POLICY}`} element={<MoreInfoPage />} />
-        <Route path={`${TERMS_OF_USAEGE}`} element={<MoreInfoPage />} />
+        <Route path={`${FREQUENTLY_ASKED_QUESTIONS}`} element={<FAQPage />} />
+        <Route path={`${PRIVACY_POLICY}`} element={<PrivacyPolicyPage />} />
+        <Route path={`${TERMS_OF_USAEGE}`} element={<TermsOfUsagePaga />} />
       </Routes>
     </Router>
   );

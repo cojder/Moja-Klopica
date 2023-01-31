@@ -21,21 +21,23 @@ const RestourantInfo = () => {
             Restoran Top FOOD 021
           </div>
           <div className="container-description-restourant">
-            <ul className="container-description-restourant">
-              <li>RESTORANI</li>
-              <li> &#x2022; Domaca kuhinja</li>
-              <li>&#x2022; 4.2 zvezdica 60 ocena</li>
-              <li>&#x2022; Besplatna dostava</li>
-            </ul>
+            <div className="container-description-restourant">
+              <div>RESTORANI</div>
+              <div> &#x2022; Domaca kuhinja</div>
+              <div>&#x2022; 4.2 zvezdica 60 ocena</div>
+              <div>&#x2022; Besplatna dostava</div>
+            </div>
           </div>
           <div className="container-description-time">
-            <ul className="container-description-time">
-              <li className="container-description-time-green">
+            <div className="container-description-time">
+              <div className="container-description-time-text">
                 <Icon icon="mdi:clock-time-four-outline" />
-                Otvoreno sad
-              </li>
-              <li> &#x2022; Zatvara se u 23:00</li>
-            </ul>
+                <div className="container-description-time-text-green">
+                  Otvoreno sad
+                </div>
+              </div>
+              <div> &#x2022; Zatvara se u 23:00</div>
+            </div>
           </div>
         </div>
       </div>
