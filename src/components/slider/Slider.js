@@ -1,26 +1,38 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect } from "react";
 
 import RestourantCard from "../restourantCard/RestourantCard";
 import { ArrowLeft, ArrowRight } from "../../assets/svg";
 
 const Slider = () => {
-  const [next, setNext] = useState(false);
-  const [priv, setPriv] = useState(false);
+  let slider;
+  useLayoutEffect(() => {
+    slider = document.getElementById("slider-element");
+  }, []);
+
+  function sideScroll(direction, step) {
+    if (direction === "left") {
+      slider.scrollLeft -= step;
+    } else {
+      slider.scrollLeft += step;
+    }
+  }
 
   return (
-    <div className="slider">
-      <div
-        className=" slider-arrow-left"
+    <div id="slider" className="slider">
+      <button
+        id="buttonLeft"
+        className="slider-arrow-left"
         onClick={() => {
-          setPriv(true);
-          console.log(priv);
+          sideScroll("left", 200);
         }}
-        href="#1"
       >
         <ArrowLeft />
-      </div>
-      <div className={!next ? "slider-element" : "slider-element-move"}>
-        <div id="1" className="slider-element-1">
+      </button>
+      <div id="slider-element" className={"slider-element"}>
+        <div className="slider-element-1">
+          <RestourantCard />
+        </div>
+        <div className="slider-element-1">
           <RestourantCard />
         </div>
         <div className="slider-element-1">
@@ -29,20 +41,16 @@ const Slider = () => {
         <div className="slider-element-1">
           <RestourantCard />
         </div>
-        <div id="4" className="slider-element-1">
-          <RestourantCard />
-        </div>
       </div>
-      <div
-        className=" slider-arrow-right"
-        href="#4"
+      <button
+        id="buttonRight"
         onClick={() => {
-          setNext(true);
-          console.log(next);
+          sideScroll("right", 200);
         }}
+        className=" slider-arrow-right"
       >
         <ArrowRight />
-      </div>
+      </button>
     </div>
   );
 };
