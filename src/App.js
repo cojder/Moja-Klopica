@@ -37,9 +37,9 @@ function App() {
         />
         <Route path={`${GALERY}/:id`} element={<RestourantGaleryPage />} />
 
-        <Route path={`${FREQUENTLY_ASKED_QUESTIONS}`} element={<FAQPage />} />
-        <Route path={`${PRIVACY_POLICY}`} element={<PrivacyPolicyPage />} />
-        <Route path={`${TERMS_OF_USAEGE}`} element={<TermsOfUsagePaga />} />
+        <Route path={FREQUENTLY_ASKED_QUESTIONS} element={<FAQPage />} />
+        <Route path={PRIVACY_POLICY} element={<PrivacyPolicyPage />} />
+        <Route path={TERMS_OF_USAEGE} element={<TermsOfUsagePaga />} />
       </Routes>
     </Router>
   );

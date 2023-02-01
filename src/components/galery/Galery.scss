@@ -9,12 +9,16 @@
       position: absolute;
       left: 2%;
       z-index: 1;
+      background: transparent;
+      border: none;
     }
     &-right {
       cursor: pointer;
       position: absolute;
       right: 2%;
       z-index: 1;
+      background: transparent;
+      border: none;
     }
   }
   &-element {

@@ -2,6 +2,7 @@
 
 .searchbar {
   padding: 1rem;
+
   &-field {
     height: 60px;
     width: 500px;
@@ -35,5 +36,25 @@
         scale: 0.9;
       }
     }
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .searchbar {
+    transform: translateX(-5rem);
+    scale: 0.8;
+  }
+}
+@media only screen and (max-width: $bp-medium) {
+  .searchbar {
+    transform: translateX(-7.5rem);
+    scale: 0.7;
+  }
+}
+@media only screen and (max-width: $bp-small) {
+  // [podesi vrednosti na osnovu hedera
+  .searchbar {
+    transform: translateX(-7.5rem);
+    scale: 0.7;
   }
 }

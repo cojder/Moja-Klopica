@@ -56,9 +56,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom-right">
-          <Link to={`${FREQUENTLY_ASKED_QUESTIONS}`}>FAQ</Link>
-          <Link to={`${TERMS_OF_USAEGE}`}>Obaveštenje o privatnosti</Link>
-          <Link to={`${PRIVACY_POLICY}`}>Uslovi korišcenja</Link>
+          <Link to={FREQUENTLY_ASKED_QUESTIONS}>FAQ</Link>
+          <Link to={TERMS_OF_USAEGE}>Obaveštenje o privatnosti</Link>
+          <Link to={PRIVACY_POLICY}>Uslovi korišcenja</Link>
         </div>
       </div>
     </div>

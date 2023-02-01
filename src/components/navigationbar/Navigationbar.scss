@@ -103,3 +103,9 @@
     }
   }
 }
+
+@media only screen and (max-width: $bp-medium) {
+  .menue {
+    scale: 0.5;
+  }
+}

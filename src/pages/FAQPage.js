@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Footer from "../components/footer/Footer";
 import MoreInfoBodyFAQ from "../components/moreInfoBody/MoreInfoBodyFAQ";
 import MoreInfoHeader from "../components/moreInfoHeader/MoreInfoHeader";
@@ -7,6 +8,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 
 const FAQPage = () => {
   const [sidebar, setSidebar] = useState(false);
+
   return (
     <div className="more-info">
       <Navigationbar showSidbar={() => setSidebar(true)} />

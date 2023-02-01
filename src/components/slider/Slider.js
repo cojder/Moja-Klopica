@@ -9,12 +9,19 @@ const Slider = () => {
     slider = document.getElementById("slider-element");
   }, []);
 
-  function sideScroll(direction, step) {
-    if (direction === "left") {
-      slider.scrollLeft -= step;
-    } else {
-      slider.scrollLeft += step;
-    }
+  function sideScroll(direction, speed, distance, step) {
+    var scrollAmount = 0;
+    var sliderTimer = setInterval(() => {
+      if (direction === "left") {
+        slider.scrollLeft -= step;
+      } else {
+        slider.scrollLeft += step;
+      }
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(sliderTimer);
+      }
+    }, speed);
   }
 
   return (
@@ -23,7 +30,7 @@ const Slider = () => {
         id="buttonLeft"
         className="slider-arrow-left"
         onClick={() => {
-          sideScroll("left", 200);
+          sideScroll("left", 50, 200, 20);
         }}
       >
         <ArrowLeft />
@@ -45,7 +52,7 @@ const Slider = () => {
       <button
         id="buttonRight"
         onClick={() => {
-          sideScroll("right", 200);
+          sideScroll("right", 50, 200, 20);
         }}
         className=" slider-arrow-right"
       >
