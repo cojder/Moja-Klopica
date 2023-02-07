@@ -67,3 +67,62 @@
   color: white;
   background-color: $color_primary;
 }
+
+@media only screen and (max-width: $bp-large) {
+  .calculator {
+    gap: 0.5rem;
+    margin: 1rem;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .button-small {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }
+
+  .button-close {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .calculator {
+    gap: 0.3rem;
+    margin: 0.5rem;
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  .button-small {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .button-close {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .calculator {
+    gap: 0.2rem;
+    margin: 0.5rem;
+    font-size: 12px;
+  }
+
+  .button-small {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+  }
+
+  .button-close {
+    width: 13px;
+    height: 13px;
+  }
+}

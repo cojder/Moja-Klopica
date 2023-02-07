@@ -18,7 +18,9 @@ const Navigationbar = ({ showSidbar }) => {
               <h5 className="Navigationbar-text-2"> TVOJA KLOPICA</h5>
             </div>
           ) : (
-            <Searchbar />
+            <div className="Navigationbar-searchbar">
+              <Searchbar />
+            </div>
           )}
           <button className="Navigationbar-login-button">Ulogujte se</button>
         </div>

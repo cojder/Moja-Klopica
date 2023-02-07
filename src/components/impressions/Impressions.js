@@ -48,43 +48,43 @@ const impressions = () => {
           <ul>
             <li>
               Opšta
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Ambijent
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Atmosfera
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Hrana
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Higijena
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Cene
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>
             <li>
               Usluga
-              <div>
+              <div className="impressions-right-list-star">
                 <Star /> <Star /> <Star /> <Star /> <Star />
               </div>
             </li>

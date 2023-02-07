@@ -33,3 +33,41 @@
     justify-content: space-between;
   }
 }
+
+@media only screen and (max-width: $bp-large) {
+  .meni-element {
+    &-top {
+      font-size: 22px;
+      line-height: 40px;
+      &-price {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .meni-element {
+    &-top {
+      font-size: 18px;
+      line-height: 30px;
+      &-price {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $bp-small) {
+  .meni-element {
+    &-top {
+      font-size: 12px;
+      line-height: 30px;
+      &-price {
+        font-size: 10px;
+        line-height: 30px;
+      }
+    }
+  }
+}

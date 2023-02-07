@@ -5,7 +5,7 @@ const MeniItem = () => {
   return (
     <div className="meni-item">
       <div className="meni-item-img">
-        <img src={Logo2} />
+        <img alt="slika" className="meni-item-img-img" src={Logo2} />
       </div>
       <div className="meni-item-right">
         <div className="meni-item-right-name">ime jela</div>

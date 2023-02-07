@@ -23,3 +23,48 @@
     color: #000000;
   }
 }
+
+@media only screen and (max-width: $bp-largest) {
+  .privacy {
+    &-text {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .privacy {
+    &-name {
+      font-size: 23px;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .privacy {
+    &-name {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    &-text {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (max-width: $bp-small) {
+  .privacy {
+    &-name {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    &-text {
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+}

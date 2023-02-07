@@ -19,13 +19,13 @@ const MoreInfoBodyTerms = () => {
           >
             Često postavljana pitanja
           </Link>
+          <Link to={PRIVACY_POLICY} className="more-info-body-left-button">
+            Obaveštenje o privatnosti
+          </Link>
           <Link
             to={TERMS_OF_USAEGE}
             className="more-info-body-left-button-active"
           >
-            Obaveštenje o privatnosti
-          </Link>
-          <Link to={PRIVACY_POLICY} className="more-info-body-left-button">
             Uslovi korišćenja
           </Link>
         </div>

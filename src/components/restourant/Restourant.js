@@ -28,7 +28,7 @@ const Restourant = () => {
           <Phone /> 0644226471
         </div>
         <div className="restourant-right-img">
-          <img src={Map} alt="map" />
+          <img className="restourant-right-img-img" src={Map} alt="map" />
         </div>
       </div>
     </div>

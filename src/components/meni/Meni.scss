@@ -57,3 +57,77 @@
     height: 100%;
   }
 }
+
+@media only screen and (max-width: $bp-large) {
+  .meni {
+    gap: 0.8rem;
+
+    &-left {
+      &-sidebar {
+        &-list {
+          margin: 1rem;
+          &-button {
+            font-size: 20px;
+            line-height: 32px;
+            margin-top: 2rem;
+            padding: 0.5rem;
+          }
+        }
+      }
+      &-element {
+        width: 55%;
+        margin: 0 1.5rem 10rem 1.5rem;
+      }
+    }
+
+    &-right {
+      width: 25%;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .meni {
+    gap: 0.5rem;
+
+    &-left {
+      &-sidebar {
+        &-list {
+          margin: 0.8rem;
+          &-button {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 2rem;
+            padding: 0.3rem;
+          }
+        }
+      }
+      &-element {
+        width: 55%;
+        margin: 0 1.5rem 10rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .meni {
+    &-left {
+      &-sidebar {
+        &-list {
+          margin: 0.5rem;
+          &-button {
+            font-size: 12px;
+            line-height: 24px;
+            margin-top: 1.5rem;
+            padding: 0.1rem;
+          }
+        }
+      }
+      &-element {
+        width: 55%;
+        margin: 0 1rem 8rem 1rem;
+      }
+    }
+  }
+}

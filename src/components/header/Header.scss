@@ -43,9 +43,6 @@
 
 @media only screen and (max-width: $bp-large) {
   .header {
-    &-img {
-    }
-
     &-elements {
       margin-top: 2rem;
       margin-left: 2rem;
@@ -54,6 +51,33 @@
         line-height: 53px;
       }
       &-text {
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $bp-medium) {
+  .header {
+    &-img {
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .header {
+    &-elements {
+      margin: 2rem 0 2rem 0;
+      width: 300px;
+      &-header {
+        font-size: 50px;
+        line-height: 53px;
+      }
+      &-text {
+        width: 250px;
+        overflow-wrap: break-word;
         font-weight: 200;
         font-size: 18px;
         line-height: 32px;
