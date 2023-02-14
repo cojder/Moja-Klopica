@@ -22,6 +22,11 @@ import "../components/moreInfoBody/MoreInfoBody.scss";
 import "../components/faq/FAQ.scss";
 import "../components/privacy/Privacy.scss";
 import "../components/terms/Terms.scss";
+import "../components/offer/Offer.scss";
+import "../components/meninNavBar/MeniNavBar.scss";
+import "../components/createAcc/CreateAcc.scss";
+import "../components/login/Login.scss";
+import "../components/successfulSingup/SuccessfulSingup.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

@@ -1,93 +1,56 @@
 @import "../../scss/variables.scss";
 
 .first {
-  display: flex;
-  align-items: center;
-  justify-self: flex-start;
   background: rgba(30, 30, 30, 0.3);
   width: 100%;
   z-index: 1;
 }
 
-.menue {
-  height: 32px;
-  width: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2.4rem;
-  cursor: pointer;
-
-  &-style {
-    height: 0.3rem;
-    width: 2rem;
-    background: white;
-
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      height: 0.3rem;
-      width: 2rem;
-      background: white;
-    }
-
-    &::after {
-      transform: translateY(-10px);
-    }
-
-    &::before {
-      transform: translateY(10px);
-    }
-  }
-}
-
-.Navigationbar {
+.navigationbar {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  &-logo {
-    margin-left: 2.4rem;
+  &-left {
+    margin-left: 2rem;
+    &-logo {
+    }
   }
-  &-searchbar {
-    width: 300px;
-  }
-
-  &-text {
-    display: flex;
-    align-items: center;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    transform: translateX(-20px);
-
-    &-1 {
+  &-right {
+    &-login-button {
+      text-decoration: none;
+      text-transform: capitalize;
       font-family: "Nunito";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 52px;
+      margin-right: 2rem;
+      padding: 0 1rem;
+      border-radius: 20px;
+      border: 3px solid transparent;
+      background-color: transparent;
       color: white;
-    }
+      cursor: pointer;
 
-    &-2 {
-      color: $color_primary;
-      font-family: "Londrina Solid";
+      &-active,
+      &:hover {
+        border-radius: 20px;
+        border: 3px solid $color_primary;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 52px;
+        margin-right: 2rem;
+        padding: 0 1rem;
+        color: white;
+      }
     }
-  }
-
-  &-login-button {
-    width: 150px;
-    height: 60px;
-    margin-right: 1.8rem;
-    border-radius: 50px;
-    border: 4px solid $color_secondary;
-    background-color: transparent;
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 30px;
-    color: white;
   }
 }
 

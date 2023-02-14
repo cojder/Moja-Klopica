@@ -4,6 +4,7 @@ import RestourantCard from "../restourantCard/RestourantCard";
 import { ArrowLeft, ArrowRight } from "../../assets/svg";
 
 const Slider = () => {
+  const ref = React.createRef();
   let slider;
   useLayoutEffect(() => {
     slider = document.getElementById("slider-element");
@@ -25,7 +26,7 @@ const Slider = () => {
   }
 
   return (
-    <div id="slider" className="slider">
+    <div ref={ref} id="slider" className="slider">
       <button
         id="buttonLeft"
         className="slider-arrow-left"

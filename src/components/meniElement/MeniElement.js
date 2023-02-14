@@ -1,20 +1,42 @@
-import React from "react";
-import MeniItem from "../meniItem/MeniItem";
+import React, { useState } from "react";
+
+import FoodPhoto from "../../assets/Food.png";
+import { Arrow } from "../../assets/svg";
 
 const MeinElement = () => {
+  const [arrow, setArrow] = useState(false);
+
   return (
     <div className="meni-element">
-      <div className="meni-element-top">
-        <div className="meni-element-top-name">Meni 1 -</div>
-        <div className="meni-element-top-price">460 din</div>
-      </div>
-      <div className="meni-element-top">
-        <div className="meni-element-top-name">Meni 1 + Čorba -</div>
-        <div className="meni-element-top-price">530 din</div>
+      <div className="meni-element-img">
+        <img
+          className="meni-element-img-img"
+          src={FoodPhoto}
+          alt="slika-jela"
+        />
       </div>
 
-      <div className="meni-element-bottom">
-        <MeniItem />
+      <div className="meni-element-name">
+        <div className="meni-element-name-name">Naziv jela</div>
+        <div
+          className={
+            arrow ? "meni-element-name-arrow" : "meni-element-name-arrow-rotate"
+          }
+          onClick={() => setArrow((prevState) => !prevState)}
+        >
+          <Arrow />
+        </div>
+      </div>
+      {arrow && (
+        <div className="meni-element-info">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+          Quisque volutpat mattis eros
+        </div>
+      )}
+
+      <div className="meni-element-meni">
+        <div className="meni-element-meni-meni">MENI 1 - </div>
+        <div className="meni-element-meni-price"> CENA </div>
       </div>
     </div>
   );

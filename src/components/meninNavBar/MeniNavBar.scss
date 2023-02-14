@@ -1,0 +1,31 @@
+@import "../../scss/variables.scss";
+.meniNavBar {
+  position: relative;
+  top: -120px;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 5rem;
+
+  &-element {
+    text-transform: uppercase;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    background-color: white;
+    color: $color_text_grey;
+    padding: 0.5rem 2.5rem;
+    border: 2px solid rgba(68, 69, 71, 0.2);
+    border-radius: 20px;
+    &:hover {
+      color: $color_primary;
+      border: 2px solid $color_primary;
+    }
+    &:active,
+    &:focus {
+      color: white;
+      background-color: $color_primary;
+    }
+  }
+}
