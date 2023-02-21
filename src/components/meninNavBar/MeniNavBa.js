@@ -1,8 +1,8 @@
 import React from "react";
 
-const MeniNavBar = () => {
+const MeniNavBar = ({ colorRed }) => {
   return (
-    <div className="meniNavBar">
+    <div className={colorRed ? "meniNavBar-red" : "meniNavBar"}>
       <button className="meniNavBar-element">pon</button>
       <button className="meniNavBar-element">uto</button>
       <button className="meniNavBar-element">sre</button>

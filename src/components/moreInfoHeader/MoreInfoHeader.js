@@ -1,6 +1,6 @@
 import React from "react";
 
-import Background from "../../assets/BackGroundTop.png";
+import Background from "../../assets/HeaderAbouUs.png";
 
 const MoreInfoHeader = () => {
   return (
@@ -8,7 +8,6 @@ const MoreInfoHeader = () => {
       <img className="header-info-img" src={Background} alt="pozadina" />
       <div className="header-info-elements">
         <div className="header-info-elements-header">MOJA KLOPICA</div>
-        <div className="header-info-elements-text">dodatne informacije</div>
       </div>
     </div>
   );

@@ -13,10 +13,11 @@
   }
   &-elements {
     position: absolute;
+    width: 100%;
     top: 43%;
     display: flex;
-    align-items: flex-end;
-    margin-left: 4rem;
+    justify-content: center;
+    align-items: center;
 
     &-header {
       font-family: "Londrina Solid";
@@ -29,47 +30,37 @@
       color: $color_primary;
       padding: 1rem;
     }
-
-    &-text {
-      font-family: "Nunito";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 38px;
-      line-height: 52px;
-      color: white;
-      padding-bottom: 1.3rem;
-    }
   }
 }
 
-@media only screen and (max-width: $bp-medium) {
-  .header-info {
-    &-img {
-      object-fit: cover;
-      height: 500px;
-    }
-    &-elements {
-      flex-direction: column;
-      align-items: flex-start;
-      &-header {
-        padding: 0;
-      }
-    }
-  }
-}
+// @media only screen and (max-width: $bp-medium) {
+//   .header-info {
+//     &-img {
+//       object-fit: cover;
+//       height: 500px;
+//     }
+//     &-elements {
+//       flex-direction: column;
+//       align-items: flex-start;
+//       &-header {
+//         padding: 0;
+//       }
+//     }
+//   }
+// }
 
-@media only screen and (max-width: $bp-small) {
-  .header-info {
-    &-elements {
-      margin-left: 2rem;
-      &-header {
-        font-size: 50px;
-        line-height: 83px;
-      }
-      &-text {
-        font-size: 28px;
-        line-height: 32px;
-      }
-    }
-  }
-}
+// @media only screen and (max-width: $bp-small) {
+//   .header-info {
+//     &-elements {
+//       margin-left: 2rem;
+//       &-header {
+//         font-size: 50px;
+//         line-height: 83px;
+//       }
+//       &-text {
+//         font-size: 28px;
+//         line-height: 32px;
+//       }
+//     }
+//   }
+// }

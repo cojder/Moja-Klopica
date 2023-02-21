@@ -1,0 +1,62 @@
+@import "../../scss/variables.scss";
+
+.cart-element {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $color_primary;
+  &-container {
+    display: flex;
+    &-img {
+      width: 100px;
+      height: 100px;
+      margin: 0.3rem;
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-box {
+      flex-direction: column;
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0.3rem;
+      &-name {
+        margin: 0.3rem;
+      }
+      &-amount {
+        margin: 0.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &-button {
+          width: 25px;
+          height: 25px;
+          border: 1px solid $color_primary;
+          background-color: transparent;
+          border-radius: 7px;
+        }
+      }
+    }
+  }
+
+  &-sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0.3rem;
+    &-bin {
+      cursor: pointer;
+    }
+    &-sum {
+    }
+  }
+}

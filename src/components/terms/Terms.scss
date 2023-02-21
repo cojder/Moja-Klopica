@@ -1,5 +1,8 @@
 @import "../../scss/variables.scss";
 .terms {
+  position: relative;
+  top: -120px;
+  margin: 2rem 4rem;
   &-text {
     font-family: "Poppins";
     font-style: normal;

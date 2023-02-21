@@ -29,6 +29,8 @@
       font-size: 32px;
       line-height: 48px;
       color: black;
+      text-transform: capitalize;
+      text-align: center;
     }
     &-arrow {
       transform: rotate(180deg);
@@ -57,10 +59,58 @@
     line-height: 45px;
     &-meni {
       color: black;
+      text-transform: uppercase;
     }
     &-price {
       color: $color_primary;
     }
+  }
+  &-reserve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+
+    &-button {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $color_primary;
+      background-color: transparent;
+      border-radius: 7px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: black;
+    }
+    &-count {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: black;
+    }
+  }
+  &-button-reserve {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    margin: 1rem;
+    padding: 0.5rem 3rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    background: $color_primary;
+    border: 1px solid $color_primary;
+    border-radius: 20px;
+    cursor: pointer;
   }
 }
 

@@ -1,36 +1,49 @@
 @import "../../scss/variables.scss";
 
 .restourant {
-  position: relative;
-  top: -120px;
-  width: 90%;
-  height: 100%;
   align-self: center;
   display: flex;
   justify-content: center;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   line-height: 36px;
   color: #333333;
-  box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
+  margin: 2rem;
+  gap: 2rem;
+
   &-left {
     width: 50%;
-    margin: 2.5rem;
-  }
-  &-right {
-    margin-top: 2rem;
+    font-size: 20px;
+    line-height: 30px;
     &-name {
       color: $color_primary;
       font-weight: 600;
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 1rem;
     }
     &-location {
-      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
     }
     &-phone {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+    &-time {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  &-right {
     &-img {
       margin-top: 1rem;
       &-img {

@@ -9,3 +9,15 @@
   gap: 2rem;
   margin: 2rem;
 }
+
+.meni-red {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.meni-box {
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+@import "../../scss/variables.scss";
+
+.about-us {
+  position: relative;
+  top: -120px;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  &-left {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    &-img {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+
+    &-header {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      color: $color_primary;
+      margin-bottom: 2rem;
+    }
+    &-body {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 36px;
+      color: #333333;
+    }
+  }
+}

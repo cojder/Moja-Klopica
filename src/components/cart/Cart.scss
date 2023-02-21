@@ -1,10 +1,13 @@
 @import "../../scss/variables.scss";
 
-.calculator {
+.cart {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: 2rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #d9d9d922;
+  border-radius: 30px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
@@ -12,35 +15,43 @@
   line-height: 36px;
   color: #333333;
   &-name {
-    border-bottom: 1px solid $color_secondary;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 2rem 0;
   }
 
   &-body {
-    border-bottom: 1px solid $color_secondary;
-    &-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      &-right {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   &-sum {
-    border-top: 1px solid $color_secondary;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 1rem;
+    &-price {
+      display: flex;
+      gap: 0.3rem;
+    }
+  }
+  &-button {
+    margin: 3rem 1rem;
+    padding: 0.5rem 3rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    background: $color_primary;
+    border: 1px solid $color_primary;
+    border-radius: 20px;
+    cursor: pointer;
   }
 }
 
@@ -69,7 +80,7 @@
 }
 
 @media only screen and (max-width: $bp-large) {
-  .calculator {
+  .cart {
     gap: 0.5rem;
     margin: 1rem;
     font-size: 20px;
@@ -89,7 +100,7 @@
 }
 
 @media only screen and (max-width: $bp-medium) {
-  .calculator {
+  .cart {
     gap: 0.3rem;
     margin: 0.5rem;
     font-size: 16px;
@@ -109,7 +120,7 @@
 }
 
 @media only screen and (max-width: $bp-small) {
-  .calculator {
+  .cart {
     gap: 0.2rem;
     margin: 0.5rem;
     font-size: 12px;

@@ -2,14 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../assets/Logo.png";
-import {
-  ABOUT_RESTOURANT,
-  FREQUENTLY_ASKED_QUESTIONS,
-} from "../../constants/paths";
+import { RESERVE, ABOUT_US } from "../../constants/paths";
 
-const Navigationbar = () => {
+const Navigationbar = ({ colorRed }) => {
   return (
-    <div className="first">
+    <div className={colorRed ? "first-red" : "first"}>
       <div className="navigationbar">
         <div className="navigationbar-left">
           <img className="navigationbar-logo" src={logo} alt="logo" />
@@ -18,7 +15,11 @@ const Navigationbar = () => {
           <Link
             to="/"
             className={
-              window.location.pathname === "/"
+              colorRed
+                ? window.location.pathname === "/"
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === "/"
                 ? "navigationbar-right-login-button-active"
                 : "navigationbar-right-login-button"
             }
@@ -26,9 +27,13 @@ const Navigationbar = () => {
             pocetna
           </Link>
           <Link
-            to={`${ABOUT_RESTOURANT}/:id`}
+            to={`${RESERVE}/:id`}
             className={
-              window.location.pathname === `${ABOUT_RESTOURANT}/:id`
+              colorRed
+                ? window.location.pathname === `${RESERVE}/:id`
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === `${RESERVE}/:id`
                 ? "navigationbar-right-login-button-active"
                 : "navigationbar-right-login-button"
             }
@@ -36,9 +41,13 @@ const Navigationbar = () => {
             Rezervisi
           </Link>
           <Link
-            to={FREQUENTLY_ASKED_QUESTIONS}
+            to={ABOUT_US}
             className={
-              window.location.pathname === `${FREQUENTLY_ASKED_QUESTIONS}`
+              colorRed
+                ? window.location.pathname === `${ABOUT_US}`
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === `${ABOUT_US}`
                 ? "navigationbar-right-login-button-active"
                 : "navigationbar-right-login-button"
             }

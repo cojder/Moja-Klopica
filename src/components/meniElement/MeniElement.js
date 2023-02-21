@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 
-import FoodPhoto from "../../assets/Food.png";
 import { Arrow } from "../../assets/svg";
+import CartELement from "../cartElement/CartElement";
 
-const MeinElement = () => {
+const MeinElement = ({ item }) => {
   const [arrow, setArrow] = useState(false);
+  const [selectItem, setSelectItem] = useState(null);
+
+  const addToCart = (item) => {
+    setSelectItem(item);
+    console.log(selectItem);
+  };
 
   return (
     <div className="meni-element">
       <div className="meni-element-img">
         <img
           className="meni-element-img-img"
-          src={FoodPhoto}
+          src={item.img.Food}
           alt="slika-jela"
         />
       </div>
-
       <div className="meni-element-name">
-        <div className="meni-element-name-name">Naziv jela</div>
+        <div className="meni-element-name-name">{item.name}</div>
         <div
           className={
             arrow ? "meni-element-name-arrow" : "meni-element-name-arrow-rotate"
@@ -27,17 +32,29 @@ const MeinElement = () => {
           <Arrow />
         </div>
       </div>
-      {arrow && (
-        <div className="meni-element-info">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros
-        </div>
-      )}
-
+      {arrow && <div className="meni-element-info">{item.description}</div>}
       <div className="meni-element-meni">
-        <div className="meni-element-meni-meni">MENI 1 - </div>
-        <div className="meni-element-meni-price"> CENA </div>
+        <div className="meni-element-meni-meni">{item.meni} - </div>
+        <div className="meni-element-meni-price"> {item.price} </div>
       </div>
+      {window.location.pathname !== "/" && (
+        <>
+          <div className="meni-element-reserve">
+            <button className="meni-element-reserve-button">-</button>
+            <div className="meni-element-reserve-count">1</div>
+            <button className="meni-element-reserve-button">+</button>
+          </div>
+          <button
+            onClick={() => addToCart(item)}
+            className="meni-element-button-reserve"
+          >
+            Rezervisi
+          </button>
+        </>
+      )}
+      {selectItem && <CartELement item={selectItem} />}{" "}
+      {/* trwba preko global steate da se penese u cart
+       */}
     </div>
   );
 };

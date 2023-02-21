@@ -6,7 +6,7 @@ import {
   ABOUT_RESTOURANT,
   GALERY,
   IMPRESSIONS,
-  MENI,
+  RESERVE,
 } from "../../constants/paths";
 
 const RestourantNavBar = () => {
@@ -24,9 +24,9 @@ const RestourantNavBar = () => {
           <House /> O Restoranu
         </Link>
         <Link
-          to={`${MENI}/:id`}
+          to={`${RESERVE}/:id`}
           className={
-            window.location.pathname === `${MENI}/:id`
+            window.location.pathname === `${RESERVE}/:id`
               ? "restourant-nav-bar-navigationbar-meni-active"
               : "restourant-nav-bar-navigationbar-meni"
           }

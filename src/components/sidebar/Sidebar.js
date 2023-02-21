@@ -4,7 +4,7 @@ import {
   ABOUT_RESTOURANT,
   GALERY,
   IMPRESSIONS,
-  MENI,
+  RESERVE,
 } from "../../constants/paths";
 
 const Sidebar = ({ onBackdropClick }) => {
@@ -19,7 +19,7 @@ const Sidebar = ({ onBackdropClick }) => {
             <a href={`${ABOUT_RESTOURANT}/:id`}>O RESTORANU</a>
           </li>
           <li className="sidebar-open-element">
-            <a href={`${MENI}/:id`}>MENI</a>
+            <a href={`${RESERVE}/:id`}>MENI</a>
           </li>
           <li className="sidebar-open-element">
             <a href={`${IMPRESSIONS}/:id`}>UTISCI</a>

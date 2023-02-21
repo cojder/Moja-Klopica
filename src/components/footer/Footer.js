@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 import logo from "../../assets/Logo.png";
-import {
-  FREQUENTLY_ASKED_QUESTIONS,
-  PRIVACY_POLICY,
-  TERMS_OF_USAEGE,
-} from "../../constants/paths";
+import { ABOUT_US } from "../../constants/paths";
 
 const Footer = () => {
   return (
@@ -25,13 +21,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-right">
-        <Link className="footer-right-aboutus" to={FREQUENTLY_ASKED_QUESTIONS}>
+        <Link className="footer-right-aboutus" to={ABOUT_US}>
           FAQ
         </Link>
-        <Link className="footer-right-aboutus" to={TERMS_OF_USAEGE}>
+        <Link className="footer-right-aboutus" to={ABOUT_US}>
           Obaveštenje o privatnosti
         </Link>
-        <Link className="footer-right-aboutus" to={PRIVACY_POLICY}>
+        <Link className="footer-right-aboutus" to={ABOUT_US}>
           Uslovi korišcenja
         </Link>
         <div className="footer-rght-copy"> &copy; Moja Klopica 2022</div>

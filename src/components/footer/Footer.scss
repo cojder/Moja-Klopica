@@ -1,9 +1,8 @@
 @import "../../scss/variables.scss";
 
 .footer {
-  justify-self: flex-end;
+  justify-items: flex-end;
   width: 100%;
-  background-color: grey;
   color: white;
   display: flex;
   justify-content: space-between;

@@ -11,7 +11,7 @@ import "../components/restourantNavBar/RestourantNavBar.scss";
 import "../components/restourant/Restourant.scss";
 import "../components/meni/Meni.scss";
 import "../components/meniElement/MeniElement.scss";
-import "../components/calculator/Calculator.scss";
+import "../components/cart/Cart.scss";
 import "../components/meniElement/MeniElement.scss";
 import "../components/meniItem/MeniItem.scss";
 import "../components/impressions/Impressions.scss";
@@ -27,6 +27,9 @@ import "../components/meninNavBar/MeniNavBar.scss";
 import "../components/createAcc/CreateAcc.scss";
 import "../components/login/Login.scss";
 import "../components/successfulSingup/SuccessfulSingup.scss";
+import "../components/cartElement/CartElement.scss";
+import "../components/aboutUsNavBar/AboutUsNavBar.scss";
+import "../components/aboutUs/AboutUs.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";
