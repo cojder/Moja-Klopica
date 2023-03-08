@@ -25,6 +25,8 @@
     }
   }
   &-right {
+    display: flex;
+    align-items: center;
     &-login-button {
       text-decoration: none;
       text-transform: capitalize;

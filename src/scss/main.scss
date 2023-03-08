@@ -20,6 +20,13 @@
   flex-direction: column;
 }
 
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
 .Arrow {
   padding: 10px 13px;
   background-color: $color_primary;

@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useQuery, QueryClient } from "react-query";
 
 import logo from "../../assets/Logo.png";
 import { RESERVE, ABOUT_US } from "../../constants/paths";
+import UserNavigation from "../userNavigation/UserNavigation";
 
 const Navigationbar = ({ colorRed }) => {
+  const { data: user } = useQuery("userLogin");
+
+  // const queryClient = QueryClient();
+
+  // const user = queryClient.getQueryData("userLogin");
+
   return (
     <div className={colorRed ? "first-red" : "first"}>
       <div className="navigationbar">
@@ -54,6 +62,9 @@ const Navigationbar = ({ colorRed }) => {
           >
             O nama
           </Link>
+          {localStorage.getItem("token") && (
+            <UserNavigation colorRed={colorRed} />
+          )}
         </div>
       </div>
     </div>

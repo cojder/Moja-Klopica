@@ -30,6 +30,11 @@ import "../components/successfulSingup/SuccessfulSingup.scss";
 import "../components/cartElement/CartElement.scss";
 import "../components/aboutUsNavBar/AboutUsNavBar.scss";
 import "../components/aboutUs/AboutUs.scss";
+import "../components/forgetPassword/ForgetPassword.scss";
+import "../components/forgetPasswordNotification/ForgetPasswordNotification.scss";
+import "../components/userNavigation/UserNavigation.scss";
+import "../components/profilechange/ProfileChange.scss";
+import "../components/changePassword/ChangePassword.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

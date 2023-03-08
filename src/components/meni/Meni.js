@@ -14,7 +14,6 @@ import MeinElement from "../meniElement/MeniElement";
 
 const Meni = ({ colorRed }) => {
   // const { data } = useQuery("meni", () => getData());
-  // console.log(data, "data Meni  after fetch");
 
   return (
     <div className="meni-box">
