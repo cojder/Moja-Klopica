@@ -1,20 +1,17 @@
 import React from "react";
 
 import CartELement from "../cartElement/CartElement";
-import { data } from "../../mockData/data";
 
 const sum = () => {
   return <div>555</div>;
 };
 
-const dataItem = data[(data.id = 1)];
-
-const Cart = () => {
+const Cart = ({ item }) => {
   return (
     <div className="cart">
       <div className="cart-name">Korpa</div>
       <div className="cart-body">
-        <CartELement item={dataItem} />
+        <CartELement item={item.meals[1]} />
         {/* {data.map((item) => (
           <CartELement key={item.id} item={item} />
         ))} */}

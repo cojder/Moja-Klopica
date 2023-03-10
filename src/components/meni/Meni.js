@@ -1,19 +1,9 @@
-// import axios from "axios";
 import React from "react";
-// import { useQuery } from "react-query";
 
-import { data } from "../../mockData/data";
 import MeinElement from "../meniElement/MeniElement";
 
-// const getData = async () => {
-//   const response = await axios.get(
-//     `C:\Users\PositiveAnja\projekti\Moja-Klopica\src\mockData\data.js`
-//   );
-//   return response;
-// };
-
-const Meni = ({ colorRed }) => {
-  // const { data } = useQuery("meni", () => getData());
+const Meni = ({ colorRed, item }) => {
+  console.log(item, "meni ");
 
   return (
     <div className="meni-box">
@@ -26,7 +16,7 @@ const Meni = ({ colorRed }) => {
         <button className="meniNavBar-element">sub</button>
       </div>
       <div className={colorRed ? "meni-red" : "meni"}>
-        {data.map((item) => (
+        {item.meals.map((item) => (
           <MeinElement key={item.id} item={item} />
         ))}
       </div>

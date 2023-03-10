@@ -1,28 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { Arrow } from "../../assets/svg";
+import Food from "../../assets/Food.png";
 import CartELement from "../cartElement/CartElement";
+import { CartContext } from "../offer/Offer";
 
 const MeinElement = ({ item }) => {
   const [arrow, setArrow] = useState(false);
   const [selectItem, setSelectItem] = useState(null);
 
+  const MyCartValue = useContext(CartContext);
+
+  // console.log(item, "item iz propa u meni elemenntu");
+
   const addToCart = (item) => {
+    MyCartValue.addItemToCart(item);
+
     setSelectItem(item);
-    console.log(selectItem);
+    console.log(selectItem, "selected item");
   };
 
   return (
     <div className="meni-element">
       <div className="meni-element-img">
-        <img
-          className="meni-element-img-img"
-          src={item.img.Food}
-          alt="slika-jela"
-        />
+        <img className="meni-element-img-img" src={item.img} alt={Food} />
       </div>
       <div className="meni-element-name">
-        <div className="meni-element-name-name">{item.name}</div>
+        <div className="meni-element-name-name">{item.title}</div>
         <div
           className={
             arrow ? "meni-element-name-arrow" : "meni-element-name-arrow-rotate"
@@ -34,7 +38,7 @@ const MeinElement = ({ item }) => {
       </div>
       {arrow && <div className="meni-element-info">{item.description}</div>}
       <div className="meni-element-meni">
-        <div className="meni-element-meni-meni">{item.meni} - </div>
+        <div className="meni-element-meni-meni">{item.type.name} - </div>
         <div className="meni-element-meni-price"> {item.price} </div>
       </div>
       {window.location.pathname !== "/" && (
@@ -52,9 +56,7 @@ const MeinElement = ({ item }) => {
           </button>
         </>
       )}
-      {selectItem && <CartELement item={selectItem} />}{" "}
-      {/* trwba preko global steate da se penese u cart
-       */}
+      {/* {selectItem && <CartELement item={selectItem} />} */}
     </div>
   );
 };

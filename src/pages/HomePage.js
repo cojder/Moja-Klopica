@@ -8,7 +8,6 @@ import Offer from "../components/offer/Offer";
 
 const HomePage = () => {
   const [sideBar, setSidebar] = useState(false);
-
   return (
     <div className="homepage">
       <Navigationbar showSidbar={() => setSidebar(true)} />

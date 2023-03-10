@@ -5,9 +5,37 @@ import axios from "axios";
 export class RestourantService {
   static getAllRestournat = async () => {
     try {
-      const data = await axios.get(`${BACKEND}/restaurant`);
+      const response = await axios.get(`${BACKEND}/restaurant`);
 
-      return data;
+      return response;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  static getRestourantWithId = async (id) => {
+    try {
+      const response = await axios.get(`${BACKEND}/restaurant/${id}`);
+
+      return response;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  static getTodayMeni = async (id) => {
+    try {
+      const response = await axios.get(`${BACKEND}/restaurant/${id}/menu`);
+      console.log(response, "RESPONSE");
+      return response;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  static getWeekMeni = async (id) => {
+    try {
+      const response = await axios.get(`${BACKEND}/restaurant/${id}/menu/week`);
+      console.log(response, "RESPONSE");
+      return response;
     } catch (e) {
       console.error(e);
     }
