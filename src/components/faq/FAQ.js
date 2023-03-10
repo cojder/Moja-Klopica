@@ -1,39 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-const FAQ = () => {
+import { Arrow } from "../../assets/svg";
+
+const FAQ = ({ comments }) => {
+  const [arrow, setArrow] = useState(false);
+
   return (
     <div className="faq">
-      <div className="faq-name">Lorem ipsum?</div>
-      <div className="faq-text">
-        Nullam mi elit, commodo nec ante id, ornare efficitur dui. Nulla in quam
-        sed ex aliquam feugiat. In varius risus est.{" "}
-      </div>
-      <div className="faq-name">Lorem ipsum dolor sit?</div>
-      <div className="faq-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi elit,
-        commodo nec ante id, ornare efficitur dui. Nullam mi elit, commodo nec
-        ante id, ornare efficitur dui. Nulla in quam sed ex aliquam feugiat. In
-        varius risus est.{" "}
-      </div>
-      <div className="faq-name">Lorem ipsum?</div>
-      <div className="faq-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi elit,
-        commodo nec ante id, ornare efficitur dui. Nullam mi elit, commodo nec
-        ante id, ornare efficitur dui. Nulla in quam sed ex aliquam feugiat. In
-        varius risus est.{" "}
-      </div>
-      <div className="faq-name">Lorem ipsum dolor sit amet?</div>
-      <div className="faq-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi elit,
-        commodo nec ante id, ornare efficitur dui. Nullam mi elit, commodo nec
-        ante id, ornare efficitur dui. Nulla in quam sed ex aliquam feugiat. In
-        varius risus est. Nullam mi elit, commodo nec ante id, ornare efficitur
-        dui. Nulla in quam sed ex aliquam feugiat. In varius risus est.{" "}
-      </div>
-      <div className="faq-name">Lorem ipsum?</div>
-      <div className="faq-text">
-        Nullam mi elit, commodo nec ante id, ornare efficitur dui. Nulla in quam
-        sed ex aliquam feugiat. In varius risus est.{" "}
+      <div className="faq-body">
+        <div className="faq-body-header">
+          <div className="faq-body-header-name">{comments.name}</div>
+          <div
+            className={
+              arrow
+                ? "faq-body-header-name-arrow"
+                : "faq-body-header-name-arrow-rotate"
+            }
+            onClick={() => setArrow((prevState) => !prevState)}
+          >
+            <Arrow />
+          </div>
+        </div>
+        <div>
+          {arrow && <div className="faq-body-text">{comments.description}</div>}
+        </div>
       </div>
     </div>
   );

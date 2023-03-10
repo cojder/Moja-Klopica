@@ -8,12 +8,16 @@
 
   &-arrow {
     &-left {
+      background: transparent;
+      border: none;
       cursor: pointer;
       position: absolute;
       left: 2%;
       z-index: 1;
     }
     &-right {
+      background: transparent;
+      border: none;
       cursor: pointer;
       position: absolute;
       right: 2%;
@@ -24,14 +28,6 @@
     display: flex;
     overflow: scroll;
 
-    &-move {
-      display: flex;
-      overflow: scroll;
-      scroll-behavior: smooth;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
     &::-webkit-scrollbar {
       display: none;
     }

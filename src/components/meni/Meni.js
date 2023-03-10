@@ -1,29 +1,24 @@
 import React from "react";
 
-import Calculator from "../calculator/Calculator";
 import MeinElement from "../meniElement/MeniElement";
 
-const Meni = () => {
+const Meni = ({ colorRed, item }) => {
+  console.log(item, "meni ");
+
   return (
-    <div className="meni">
-      <div className="meni-left">
-        <div className="meni-left-sidebar">
-          <ul className="meni-left-sidebar-list">
-            <li onClick={() => console.log("ponedeljak")}>PONEDELJEAK</li>
-            <li onClick={() => console.log("utorak")}>utorak</li>
-            <li onClick={() => console.log("sreda")}>sreda</li>
-            <li onClick={() => console.log("cetvrtak")}>cetvrtak</li>
-            <li onClick={() => console.log("petak")}>petak</li>
-          </ul>
-        </div>
-        <div className="meni-left-element">
-          <MeinElement />
-          <MeinElement />
-          <MeinElement />
-        </div>
+    <div className="meni-box">
+      <div className={colorRed ? "meniNavBar-red" : "meniNavBar"}>
+        <button className="meniNavBar-element">pon</button>
+        <button className="meniNavBar-element">uto</button>
+        <button className="meniNavBar-element">sre</button>
+        <button className="meniNavBar-element">cet</button>
+        <button className="meniNavBar-element">pet</button>
+        <button className="meniNavBar-element">sub</button>
       </div>
-      <div className="meni-right">
-        <Calculator />
+      <div className={colorRed ? "meni-red" : "meni"}>
+        {item.meals.map((item) => (
+          <MeinElement key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );

@@ -1,42 +1,30 @@
 import React from "react";
 
-import GaleryCard from "../galeryCard/GaleryCard";
-import { ArrowLeft, ArrowRight } from "../../assets/svg";
+import GaleryImg from "../../assets/TopFood.png";
 
 const Galery = () => {
   return (
     <div className="galery">
-      <div
-        className=" galery-arrow-left"
-        onClick={() => {
-          console.log("levo");
-        }}
-        href="#1"
-      >
-        <ArrowLeft />
+      <div className="galery-element">
+        <img className="galery-element-img" src={GaleryImg} alt="slika" />
       </div>
-      <div className={"galery-element"}>
-        <div id="1" className="galery-element-1">
-          <GaleryCard />
-        </div>
-        <div className="galery-element-1">
-          <GaleryCard />
-        </div>
-        <div className="galery-element-1">
-          <GaleryCard />
-        </div>
-        <div id="4" className="galery-element-1">
-          <GaleryCard />
-        </div>
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
       </div>
-      <div
-        className=" galery-arrow-right"
-        href="#4"
-        onClick={() => {
-          console.log("desno");
-        }}
-      >
-        <ArrowRight />
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
+      </div>
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
+      </div>
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
+      </div>
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
+      </div>
+      <div className="galery-element">
+        <img className="galery-element-img" alt="slika" src={GaleryImg} />
       </div>
     </div>
   );

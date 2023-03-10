@@ -6,7 +6,6 @@ import Slider from "../components/slider/Slider";
 import Sidebar from "../components/sidebar/Sidebar";
 import RestourantInfo from "../components/restourantInfo/RestourantInfo";
 import RestourantNavBar from "../components/restourantNavBar/RestourantNavBar";
-
 import Galery from "../components/galery/Galery";
 
 const RestourantGaleryPage = () => {

@@ -1,27 +1,23 @@
 .galery {
-  position: relative;
-  top: -120px;
-  display: flex;
-  align-items: center;
-  &-arrow {
-    &-left {
-      cursor: pointer;
-      position: absolute;
-      left: 2%;
-      z-index: 1;
-    }
-    &-right {
-      cursor: pointer;
-      position: absolute;
-      right: 2%;
-      z-index: 1;
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+  justify-items: center;
   &-element {
-    display: flex;
-    overflow: scroll;
-    &::-webkit-scrollbar {
-      display: none;
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    &-img {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(217, 217, 217, 0.072) 0%,
+        rgba(78, 78, 78, 0.536858) 52.4%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      border-radius: 30px;
+      object-fit: cover;
     }
   }
 }

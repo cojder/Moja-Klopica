@@ -14,7 +14,7 @@ const RestourantInfo = () => {
           <img className="container-img-img" src={TopFood} alt="slika" />
         </div>
         <div className="container-logo">
-          <img src={Logo2} />
+          <img src={Logo2} alt="logo" />
         </div>
         <div className="container-description">
           <div className="container-description-title">

@@ -1,29 +1,73 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useQuery, QueryClient } from "react-query";
 
 import logo from "../../assets/Logo.png";
-import Searchbar from "../searchbar/Searchbar";
+import { RESERVE, ABOUT_US } from "../../constants/paths";
+import UserNavigation from "../userNavigation/UserNavigation";
 
-const Navigationbar = ({ showSidbar }) => {
+const Navigationbar = ({ colorRed }) => {
+  const { data: user } = useQuery("userLogin");
+
+  // const queryClient = QueryClient();
+
+  // const user = queryClient.getQueryData("userLogin");
+
   return (
-    <>
-      <div className="first">
-        <div className="menue" onClick={showSidbar}>
-          <div className="menue-style"></div>
+    <div className={colorRed ? "first-red" : "first"}>
+      <div className="navigationbar">
+        <div className="navigationbar-left">
+          <img className="navigationbar-logo" src={logo} alt="logo" />
         </div>
-        <div className="Navigationbar">
-          <img className="Navigationbar-logo" src={logo} alt="logo" />
-          {window.location.pathname === "/" ? (
-            <div className="Navigationbar-text">
-              <h5 className="Navigationbar-text-1">Saznaj gde je najbliža </h5>
-              <h5 className="Navigationbar-text-2"> TVOJA KLOPICA</h5>
-            </div>
-          ) : (
-            <Searchbar />
+        <div className="navigationbar-right">
+          <Link
+            to="/"
+            className={
+              colorRed
+                ? window.location.pathname === "/"
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === "/"
+                ? "navigationbar-right-login-button-active"
+                : "navigationbar-right-login-button"
+            }
+          >
+            pocetna
+          </Link>
+          <Link
+            to={`${RESERVE}/:id`}
+            className={
+              colorRed
+                ? window.location.pathname === `${RESERVE}/:id`
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === `${RESERVE}/:id`
+                ? "navigationbar-right-login-button-active"
+                : "navigationbar-right-login-button"
+            }
+          >
+            Rezervisi
+          </Link>
+          <Link
+            to={ABOUT_US}
+            className={
+              colorRed
+                ? window.location.pathname === `${ABOUT_US}`
+                  ? "navigationbar-right-login-button-red-active"
+                  : "navigationbar-right-login-button-red"
+                : window.location.pathname === `${ABOUT_US}`
+                ? "navigationbar-right-login-button-active"
+                : "navigationbar-right-login-button"
+            }
+          >
+            O nama
+          </Link>
+          {localStorage.getItem("token") && (
+            <UserNavigation colorRed={colorRed} />
           )}
-          <button className="Navigationbar-login-button">Ulogujte se</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

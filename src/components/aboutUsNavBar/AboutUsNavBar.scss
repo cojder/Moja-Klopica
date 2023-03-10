@@ -1,0 +1,48 @@
+@import "../../scss/variables.scss";
+
+.aboutus-navbar {
+  position: relative;
+  top: -120px;
+  margin: 2rem;
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+
+  &-element {
+    width: 220px;
+    height: 50px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: rgba(40, 39, 32, 0.2);
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 20px;
+    background-color: transparent;
+
+    &:hover {
+      color: $color_primary;
+      border: 1px solid $color_primary;
+    }
+    &:active,
+    &:focus {
+      color: white;
+      background-color: $color_primary;
+    }
+
+    &-red {
+      width: 220px;
+      height: 50px;
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      border: 1px solid rgba(51, 51, 51, 0.2);
+      border-radius: 20px;
+      color: white;
+      background-color: $color_primary;
+    }
+  }
+}

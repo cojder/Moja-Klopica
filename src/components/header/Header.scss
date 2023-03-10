@@ -4,7 +4,7 @@
   position: relative;
   top: -120px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   &-img {
     object-fit: cover;
@@ -37,6 +37,71 @@
       line-height: 52px;
       color: white;
       padding: 1rem;
+      width: 31.25rem;
+    }
+    &-buttons {
+      display: flex;
+      padding: 1rem;
+      &-style {
+        text-decoration: none;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 30px;
+        margin-right: 2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 45px;
+        border: 4px solid $color_primary;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .header {
+    &-elements {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      &-header {
+        font-size: 50px;
+        line-height: 53px;
+      }
+      &-text {
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $bp-medium) {
+  .header {
+    &-img {
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .header {
+    &-elements {
+      margin: 2rem 0 2rem 0;
+      width: 300px;
+      &-header {
+        font-size: 50px;
+        line-height: 53px;
+      }
+      &-text {
+        width: 250px;
+        overflow-wrap: break-word;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 32px;
+      }
     }
   }
 }

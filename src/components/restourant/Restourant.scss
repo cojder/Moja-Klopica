@@ -1,38 +1,125 @@
 @import "../../scss/variables.scss";
 
 .restourant {
-  position: relative;
-  top: -120px;
-  width: 90%;
-  height: 100%;
   align-self: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   line-height: 36px;
   color: #333333;
-  box-shadow: 0px 0px 14.3778px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
+  margin: 2rem;
+  gap: 2rem;
+
   &-left {
     width: 50%;
-    margin: 2.5rem;
-  }
-  &-right {
+    font-size: 20px;
+    line-height: 30px;
     &-name {
       color: $color_primary;
       font-weight: 600;
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 1rem;
     }
     &-location {
-      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
     }
     &-phone {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+    &-time {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  &-right {
     &-img {
       margin-top: 1rem;
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .restourant {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    &-left {
+      width: 40%;
+      margin: 1.5rem;
+    }
+    &-right {
+      &-img {
+        scale: 0.9;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $bp-medium) {
+  .restourant {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 26px;
+    &-left {
+      width: 60%;
+      margin: 1.2rem;
+    }
+    &-right {
+      width: 40%;
+
+      &-img {
+        width: 220px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $bp-small) {
+  .restourant {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 18px;
+    &-left {
+      width: 60%;
+      margin: 1.2rem;
+    }
+    &-right {
+      width: 40%;
+
+      &-location {
+        scale: 0.8;
+      }
+      &-phone {
+        scale: 0.8;
+      }
+      &-img {
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-smaller) {
+  .restourant {
+    &-right {
+      &-img {
+        width: 100px;
+      }
     }
   }
 }

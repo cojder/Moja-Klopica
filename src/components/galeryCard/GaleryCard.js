@@ -1,6 +1,6 @@
 import React from "react";
 
-import GaleryImg from "../../assets/GaleryImg.png";
+import GaleryImg from "../../assets/TopFood.png";
 
 const GaleryCard = () => {
   return (

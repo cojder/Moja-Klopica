@@ -14,18 +14,15 @@ const MoreInfoBodyFAQ = () => {
       <div className="more-info-body-left">
         <div className="more-info-body-left-button">
           <Link
-            to={`${FREQUENTLY_ASKED_QUESTIONS}`}
+            to={FREQUENTLY_ASKED_QUESTIONS}
             className="more-info-body-left-button-active"
           >
             Često postavljana pitanja
           </Link>
-          <Link
-            to={`${TERMS_OF_USAEGE}`}
-            className="more-info-body-left-button"
-          >
+          <Link to={PRIVACY_POLICY} className="more-info-body-left-button">
             Obaveštenje o privatnosti
           </Link>
-          <Link to={`${PRIVACY_POLICY}`} className="more-info-body-left-button">
+          <Link to={TERMS_OF_USAEGE} className="more-info-body-left-button">
             Uslovi korišćenja
           </Link>
         </div>

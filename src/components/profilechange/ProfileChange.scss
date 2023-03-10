@@ -1,0 +1,91 @@
+@import "../../scss/variables.scss";
+
+.profile-change {
+  display: flex;
+  flex-direction: column;
+  &-left {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: black;
+    margin: 0 4rem;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+      &-img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+      &-password {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgba(51, 51, 51, 0.8);
+        cursor: pointer;
+      }
+    }
+    &-container {
+      width: 60%;
+      &-field {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.8);
+        justify-content: center;
+        margin: 1rem 0;
+        &-error {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 2px solid $color_primary;
+        }
+        &-input {
+          margin: 1rem;
+          width: 100%;
+          border: none;
+          background: transparent;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          color: rgba(51, 51, 51, 0.8);
+          &:active,
+          &:focus {
+            -webkit-autofill: none;
+            outline: none;
+          }
+        }
+      }
+    }
+    &-confirm {
+      margin: 2rem;
+      padding: 0 4rem;
+      background: $color_primary;
+      border: 1px solid $color_primary;
+      border-radius: 20px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
