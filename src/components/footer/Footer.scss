@@ -70,6 +70,10 @@
       display: flex;
       gap: 2rem;
       margin-right: 2.5%;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }

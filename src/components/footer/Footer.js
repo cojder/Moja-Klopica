@@ -1,10 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 import logo from "../../assets/Logo.png";
 import AppStore from "../../assets/AppStore.png";
 import GooglePlay from "../../assets/GooglePlay.png";
 import { InstagramSvg, FacebookSvg, TiktokSvg } from "../../assets/svg";
+import {
+  FREQUENTLY_ASKED_QUESTIONS,
+  PRIVACY_POLICY,
+  TERMS_OF_USAEGE,
+} from "../../constants/paths";
 
 const Footer = () => {
   const clickedImg = () => {
@@ -50,9 +56,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom-right">
-          <div>FAQ</div>
-          <div>Obaveštenje o privatnosti</div>
-          <div>Uslovi korišcenja</div>
+          <Link to={`${FREQUENTLY_ASKED_QUESTIONS}`}>FAQ</Link>
+          <Link to={`${TERMS_OF_USAEGE}`}>Obaveštenje o privatnosti</Link>
+          <Link to={`${PRIVACY_POLICY}`}>Uslovi korišcenja</Link>
         </div>
       </div>
     </div>
