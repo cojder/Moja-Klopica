@@ -3,8 +3,6 @@ import React from "react";
 import MeinElement from "../meniElement/MeniElement";
 
 const Meni = ({ colorRed, item }) => {
-  console.log(item, "meni ");
-
   return (
     <div className="meni-box">
       <div className={colorRed ? "meniNavBar-red" : "meniNavBar"}>
@@ -16,7 +14,7 @@ const Meni = ({ colorRed, item }) => {
         <button className="meniNavBar-element">sub</button>
       </div>
       <div className={colorRed ? "meni-red" : "meni"}>
-        {item.meals.map((item) => (
+        {item.map((item) => (
           <MeinElement key={item.id} item={item} />
         ))}
       </div>

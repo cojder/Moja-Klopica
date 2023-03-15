@@ -6,18 +6,23 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  max-width: 450px;
   background: #d9d9d922;
   border-radius: 30px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   color: #333333;
   &-name {
     font-weight: 600;
     text-transform: uppercase;
     margin: 2rem 0;
+  }
+
+  &-empty {
+    margin: 2rem;
   }
 
   &-body {
@@ -28,13 +33,13 @@
   }
 
   &-sum {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 16px;
     margin-top: 1rem;
     &-price {
       display: flex;
@@ -43,9 +48,9 @@
   }
   &-button {
     margin: 3rem 1rem;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2rem;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 30px;
     color: white;
     background: $color_primary;
@@ -53,30 +58,6 @@
     border-radius: 20px;
     cursor: pointer;
   }
-}
-
-.button-small {
-  border: 1px solid $color_primary;
-  width: 30px;
-  height: 30px;
-  font-size: 24px;
-  color: #333333;
-  background-color: transparent;
-  border-radius: 5px;
-  &:hover,
-  &:active {
-    color: white;
-    background-color: $color_primary;
-  }
-}
-
-.button-close {
-  width: 17px;
-  height: 17px;
-  border: none;
-  border-radius: 3px;
-  color: white;
-  background-color: $color_primary;
 }
 
 @media only screen and (max-width: $bp-large) {
