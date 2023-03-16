@@ -35,6 +35,8 @@ import "../components/forgetPasswordNotification/ForgetPasswordNotification.scss
 import "../components/userNavigation/UserNavigation.scss";
 import "../components/profilechange/ProfileChange.scss";
 import "../components/changePassword/ChangePassword.scss";
+import "../components/successfulReservation/SuccessfulReservation.scss";
+import "../components/myReservation/MyReservation.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

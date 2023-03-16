@@ -7,3 +7,4 @@ export const PRIVACY_POLICY = "/privacy-policy";
 export const TERMS_OF_USAEGE = "/terms-of-usage";
 export const ABOUT_US = "/about-us";
 export const PROFILE = "/user-profile";
+export const MYRESERVATION = "/my-reservation";

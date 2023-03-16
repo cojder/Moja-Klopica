@@ -8,6 +8,14 @@
   justify-items: center;
   gap: 2rem;
   margin: 2rem;
+  &-empty {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: #333333;
+  }
 }
 
 .meni-red {

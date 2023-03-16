@@ -6,11 +6,11 @@ import { UserService } from "../../apis/User";
 import Profile from "../../assets/Profile.png";
 import {
   ArrowWhite,
-  MyReservation,
+  MyReservationIcon,
   ProfileChange,
   LogOutIcon,
 } from "../../assets/svg";
-import { PROFILE } from "../../constants/paths";
+import { MYRESERVATION, PROFILE } from "../../constants/paths";
 
 const UserNavigation = ({ colorRed }) => {
   const [userInfo, setUserInfo] = useState(false);
@@ -43,10 +43,10 @@ const UserNavigation = ({ colorRed }) => {
       </div>
       {userInfo && (
         <div className={colorRed ? "user-info-red" : "user-info"}>
-          <button className="user-info-element">
-            <MyReservation />
+          <Link to={`${MYRESERVATION}/id`} className="user-info-element">
+            <MyReservationIcon />
             Moje rezervacije
-          </button>
+          </Link>
           <Link
             to={`${PROFILE}/${logedUser?.id}`}
             className="user-info-element"

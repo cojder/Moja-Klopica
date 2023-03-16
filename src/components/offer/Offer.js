@@ -8,13 +8,14 @@ import { ABOUT_RESTOURANT } from "../../constants/paths";
 import { useQuery } from "react-query";
 import { RestourantService } from "../../apis/RestourantsAPI";
 
-import { data as item } from "../../mockData/data";
-
 export const CartContext = createContext(null);
+
+const date = new Date();
 
 const Offer = ({ colorRed }) => {
   const ref = useRef(null);
   const [cartItems, setCartItems] = useState([]);
+  const [today, setToday] = useState(date);
 
   const addItemToCart = (item, quantity) => {
     const itemExist = cartItems.findIndex(
@@ -50,15 +51,18 @@ const Offer = ({ colorRed }) => {
     setCartItems(updateCartItems);
   };
 
+  const resetCart = () => {
+    setCartItems([]);
+  };
+
   const { data: weekMeni } = useQuery("meniWeek", () =>
-    RestourantService.getWeekMeni(4)
+    RestourantService.getWeekMeni(5)
   );
 
   ////////////////////////////////////// svi restiorani
   // const { data: allRestourants } = useQuery("ALLRESTOURANTS", () =>
   //   RestourantService.getAllRestournat()
   // );
-  // // console.log(allRestourants, "svi restorani");
 
   const scrollDown = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -72,10 +76,10 @@ const Offer = ({ colorRed }) => {
           addItemToCart,
           removeItemFrommCart,
           updateItemQuantity,
-          // sum,
+          resetCart,
+          weekMeni,
         }}
       >
-        {/* {weekMeni?.data?.map((item) => ( */}
         <div>
           <div className={colorRed ? "offer-red" : "offer"}>
             <div className="offer-offer">
@@ -109,24 +113,23 @@ const Offer = ({ colorRed }) => {
                   colorRed ? "offer-red-header-dnevni " : "offer-header-dnevni"
                 }
               >
-                dnevni meni {item.date}
+                dnevni meni {today.toLocaleDateString()}
               </div>
             </div>
           </div>
           {colorRed ? (
             <div className="reserve">
               <div className="reserve-left">
-                <Meni item={item} colorRed />
+                <Meni today={today} setToday={setToday} colorRed />
               </div>
               <div className="reserve-right">
-                <Cart item={item} />
+                <Cart />
               </div>
             </div>
           ) : (
-            <Meni item={item} />
+            <Meni today={today} setToday={setToday} />
           )}
         </div>
-        {/* ))} */}
       </CartContext.Provider>
     </>
   );
