@@ -15,7 +15,7 @@ const ChangePassword = ({ closeModal }) => {
 
   const changePasswordMutate = useMutation({
     mutationFn: (data) => {
-      return UserService.updatePassword(data);
+      return UserService.updatePassword(data, localStorage.getItem("token"));
     },
     onSuccess: () => {
       closeModal();

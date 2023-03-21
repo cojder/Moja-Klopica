@@ -1,7 +1,6 @@
 import axios from "axios";
 
 import { BACKEND } from "../constants/Backend";
-import { data } from "../mockData/data";
 
 export class UserService {
   static registerClient = async (data) => {
@@ -44,11 +43,11 @@ export class UserService {
     }
   };
 
-  static getLogedUser = async () => {
+  static getLogedUser = async (token) => {
     try {
       const response = await axios.get(`${BACKEND}/auth/profile`, {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
+          Authorization: "Bearer " + token,
         },
       });
       const data = await response.data;
@@ -59,11 +58,11 @@ export class UserService {
     }
   };
 
-  static updateClient = async (data) => {
+  static updateClient = async (data, token) => {
     try {
       const response = await axios.patch(`${BACKEND}/client`, data, {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
+          Authorization: "Bearer " + token,
         },
       });
       return response;
@@ -72,11 +71,11 @@ export class UserService {
     }
   };
 
-  static updatePassword = async (data) => {
+  static updatePassword = async (data, token) => {
     try {
       const response = await axios.patch(`${BACKEND}/client/password`, data, {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("token"),
+          Authorization: "Bearer " + token,
         },
       });
       return response;

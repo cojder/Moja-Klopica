@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useQuery } from "react-query";
 
@@ -16,14 +16,17 @@ const ProfileCgange = ({ showModal }) => {
     error,
     isLoading,
   } = useQuery("user", {
-    queryFn: () => UserService.getLogedUser(),
+    queryFn: () => UserService.getLogedUser(localStorage.getItem("token")),
   });
 
   const { data: userLogin } = useQuery("userLogin");
 
   const submit = (data) => {
     const { name, surname, phoneNumber } = data;
-    UserService.updateClient({ id: user.id, name, surname, phoneNumber });
+    UserService.updateClient(
+      { id: user.id, name, surname, phoneNumber },
+      localStorage.getItem("token")
+    );
   };
 
   if (isLoading) {

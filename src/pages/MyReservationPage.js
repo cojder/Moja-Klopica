@@ -6,7 +6,7 @@ import MyReservation from "../components/myReservation/MyReservation";
 
 const MyReservationPage = () => {
   return (
-    <div>
+    <div className="myreservation-page">
       <Navigationbar colorRed />
       <MyReservation />
       <Footer />

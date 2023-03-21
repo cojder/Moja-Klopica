@@ -13,8 +13,6 @@ const Restourant = () => {
     error,
   } = useQuery("restourants", () => RestourantService.getRestourantWithId(1));
 
-  console.log(restourant, "restouran data");
-
   if (isError) return <h3>{error}</h3>;
 
   if (isLoading) return <h3>Loading...</h3>;

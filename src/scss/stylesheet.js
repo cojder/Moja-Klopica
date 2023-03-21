@@ -37,6 +37,7 @@ import "../components/profilechange/ProfileChange.scss";
 import "../components/changePassword/ChangePassword.scss";
 import "../components/successfulReservation/SuccessfulReservation.scss";
 import "../components/myReservation/MyReservation.scss";
+import "../components/reservElement/ReservElement.scss";
 
 import "@fontsource/nunito";
 import "@fontsource/sriracha";

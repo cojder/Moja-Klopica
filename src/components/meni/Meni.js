@@ -19,7 +19,14 @@ const Meni = ({ colorRed, today, setToday }) => {
       (item) => new Date(item.date).getDay() === dayOfWeek
     );
     setItem(meni);
-    setToday(new Date(meni.date));
+
+    let daysToAdd = dayOfWeek - today.getDay();
+    const nextDate = new Date(today.getTime());
+    nextDate.setDate(today.getDate() + daysToAdd);
+
+    meni?.date === undefined
+      ? setToday(new Date(nextDate))
+      : setToday(new Date(meni?.date));
   };
 
   useEffect(() => {
@@ -90,7 +97,9 @@ const Meni = ({ colorRed, today, setToday }) => {
             Dnevni meni za {today.toLocaleDateString()} jos uvek nije definisan
           </div>
         ) : (
-          item?.meals?.map((item) => <MeinElement key={item.id} item={item} />)
+          item?.meals?.map((items) => (
+            <MeinElement date={item?.date} key={items.id} items={items} />
+          ))
         )}
       </div>
     </div>

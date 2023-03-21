@@ -3,9 +3,14 @@ import { BACKEND } from "../constants/Backend";
 import axios from "axios";
 
 export class RestourantService {
-  static getAllRestournat = async () => {
+  static getAllRestournat = async (token) => {
+    console.log(token, "token RESTOURAN SERVICE");
     try {
-      const response = await axios.get(`${BACKEND}/restaurant`);
+      const response = await axios.get(`${BACKEND}/restaurant`, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
 
       return response;
     } catch (e) {
@@ -34,18 +39,9 @@ export class RestourantService {
   static getWeekMeni = async (id) => {
     try {
       const response = await axios.get(`${BACKEND}/restaurant/${id}/menu/week`);
-      console.log(response, "RESPONSE");
       return response;
     } catch (e) {
       console.error(e);
     }
   };
 }
-
-// export const getAllRestournat = async () =>
-//   await axios
-//     .get(`${BACKEND}/restaurant`)
-//     .then((response) => response?.data)
-//     .catch((error) => {
-//       console.log(error.response);
-//     });

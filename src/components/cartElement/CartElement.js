@@ -4,13 +4,13 @@ import { Bin } from "../../assets/svg";
 import { CartContext } from "../offer/Offer";
 import Food from "../../assets/Food.png";
 
-const CartELement = () => {
+const CartELement = ({ total }) => {
   const { cartItems, removeItemFrommCart, updateItemQuantity } =
     useContext(CartContext);
 
   return (
     <>
-      {cartItems.map((item) => (
+      {cartItems?.map((item) => (
         <div key={item.id} className="cart-element">
           <div className="cart-element-container">
             <div className="cart-element-container-img">

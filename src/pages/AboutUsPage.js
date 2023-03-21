@@ -8,7 +8,6 @@ import AboutUs from "../components/aboutUs/AboutUs";
 import FAQ from "../components/faq/FAQ";
 import Privacy from "../components/privacy/Privacy";
 import Terms from "../components/terms/Terms";
-import { data } from "../mockData/comments";
 
 const FAQPage = () => {
   const [component, setComponent] = useState("about us");
@@ -19,8 +18,7 @@ const FAQPage = () => {
       <MoreInfoHeader />
       <AboutUsNavBar component={component} setComponent={setComponent} />
       {component === "about us" && <AboutUs />}
-      {component === "faq" &&
-        data.map((comments) => <FAQ key={comments.id} comments={comments} />)}
+      {component === "faq" && <FAQ />}
       {component === "privacy" && <Privacy />}
       {component === "terms" && <Terms />}
       <Footer />

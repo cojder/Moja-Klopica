@@ -17,7 +17,7 @@ const Offer = ({ colorRed }) => {
   const [cartItems, setCartItems] = useState([]);
   const [today, setToday] = useState(date);
 
-  const addItemToCart = (item, quantity) => {
+  const addItemToCart = (item, quantity, date, mealId) => {
     const itemExist = cartItems.findIndex(
       (cartItem) => cartItem.id === item.id
     );
@@ -27,7 +27,7 @@ const Offer = ({ colorRed }) => {
       updateCartItems[itemExist].quantity += quantity;
       setCartItems(updateCartItems);
     } else {
-      const newItem = { ...item, quantity };
+      const newItem = { ...item, quantity, date, mealId };
       setCartItems([...cartItems, newItem]);
     }
   };
@@ -59,9 +59,9 @@ const Offer = ({ colorRed }) => {
     RestourantService.getWeekMeni(5)
   );
 
-  ////////////////////////////////////// svi restiorani
+  ////////////////////////////////////// svi restiorani dobijas zabranu moras bit Owner ili admin
   // const { data: allRestourants } = useQuery("ALLRESTOURANTS", () =>
-  //   RestourantService.getAllRestournat()
+  //   RestourantService.getAllRestournat(localStorage.getItem("token"))
   // );
 
   const scrollDown = () => {
@@ -123,7 +123,7 @@ const Offer = ({ colorRed }) => {
                 <Meni today={today} setToday={setToday} colorRed />
               </div>
               <div className="reserve-right">
-                <Cart />
+                <Cart today={today} />
               </div>
             </div>
           ) : (

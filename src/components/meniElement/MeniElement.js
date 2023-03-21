@@ -4,7 +4,7 @@ import { Arrow } from "../../assets/svg";
 import { CartContext } from "../offer/Offer";
 import Food from "../../assets/Food.png";
 
-const MeinElement = ({ item }) => {
+const MeinElement = ({ date, items }) => {
   const [arrow, setArrow] = useState(false);
   const [newItemQuantity, setNewItemQuantity] = useState(1);
 
@@ -17,12 +17,12 @@ const MeinElement = ({ item }) => {
   };
 
   return (
-    <div key={item.id} className="meni-element">
+    <div key={items?.id} className="meni-element">
       <div className="meni-element-img">
         <img className="meni-element-img-img" src={Food} alt={"slika"} />
       </div>
       <div className="meni-element-name">
-        <div className="meni-element-name-name">{item.title}</div>
+        <div className="meni-element-name-name">{items?.title}</div>
         <div
           className={
             arrow ? "meni-element-name-arrow" : "meni-element-name-arrow-rotate"
@@ -32,10 +32,10 @@ const MeinElement = ({ item }) => {
           <Arrow />
         </div>
       </div>
-      {arrow && <div className="meni-element-info">{item.description}</div>}
+      {arrow && <div className="meni-element-info">{items?.description}</div>}
       <div className="meni-element-meni">
-        <div className="meni-element-meni-meni">{item.type.name} - </div>
-        <div className="meni-element-meni-price"> {item.price} </div>
+        <div className="meni-element-meni-meni">{items?.type?.name} - </div>
+        <div className="meni-element-meni-price"> {items?.price} </div>
       </div>
       {window.location.pathname !== "/" && (
         <>
@@ -54,7 +54,7 @@ const MeinElement = ({ item }) => {
           </div>
           <button
             onClick={() => {
-              addItemToCart(item, newItemQuantity);
+              addItemToCart(items, newItemQuantity, date, items.id);
               setNewItemQuantity(1);
             }}
             className="meni-element-button-reserve"

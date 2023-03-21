@@ -16,7 +16,9 @@ const UserNavigation = ({ colorRed }) => {
   const [userInfo, setUserInfo] = useState(false);
   const queryClient = useQueryClient();
 
-  const { data: logedUser } = useQuery("user", UserService.getLogedUser);
+  const { data: logedUser } = useQuery("user", () =>
+    UserService.getLogedUser(localStorage.getItem("token"))
+  );
 
   const logoutUser = () => {
     localStorage.removeItem("token");
