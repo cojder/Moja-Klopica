@@ -17,7 +17,7 @@ const ReseveElement = ({ meals }) => {
         REzervacija BrojRezervacije
       </div>
       {meals?.items?.map((meal) => (
-        <div className="reserv-element-body">
+        <div key={meal.id} className="reserv-element-body">
           <div className="reserv-element-body-img">
             <img
               className="reserv-elemen-bodyt-img-img"
@@ -38,9 +38,7 @@ const ReseveElement = ({ meals }) => {
                 {meals?.price} RSD
               </div>
               <button
-                onClick={() => {
-                  deleteMeal.mutateAsync(meal.id);
-                }}
+                onClick={() => deleteMeal.mutateAsync(meals.id)}
                 className="reserv-element-body-box-bottom-button"
               >
                 otkaži rezervaciju

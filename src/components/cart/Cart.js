@@ -24,11 +24,9 @@ const Cart = ({ today }) => {
     retry: false,
   });
 
-  const ItemsInCart = cartItems?.map((items) => items);
-  const total = ItemsInCart.reduce(
-    (acc, curr) => acc + curr.price * curr.quantity,
-    0
-  );
+  const total = cartItems
+    ?.map((items) => items)
+    .reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
 
   const itemsToReserv = {
     date: today.toISOString(),
@@ -56,9 +54,7 @@ const Cart = ({ today }) => {
             </div>
             <div>{ReserveMeal?.error?.response?.data?.message}</div>
             <button
-              onClick={() => {
-                ReserveMeal.mutateAsync(itemsToReserv);
-              }}
+              onClick={() => ReserveMeal.mutateAsync(itemsToReserv)}
               className="cart-button"
             >
               Potvrdi rezervaciju
@@ -68,9 +64,7 @@ const Cart = ({ today }) => {
       </div>
       {succesfulReservedOrder && (
         <SuccesfulReservation
-          closeModal={() => {
-            setsuccesfulReservedOrder(false);
-          }}
+          closeModal={() => setsuccesfulReservedOrder(false)}
         />
       )}
     </>

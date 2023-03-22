@@ -72,12 +72,7 @@ const CreateAcc = ({ setShowModal, closeModal }) => {
   };
 
   return (
-    <div
-      className="create-acc"
-      onClick={() => {
-        closeModal();
-      }}
-    >
+    <div className="create-acc" onClick={() => closeModal()}>
       <form
         onSubmit={submit}
         onClick={(e) => e.stopPropagation()}

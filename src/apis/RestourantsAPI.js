@@ -1,10 +1,8 @@
 import { BACKEND } from "../constants/Backend";
 
 import axios from "axios";
-
 export class RestourantService {
   static getAllRestournat = async (token) => {
-    console.log(token, "token RESTOURAN SERVICE");
     try {
       const response = await axios.get(`${BACKEND}/restaurant`, {
         headers: {

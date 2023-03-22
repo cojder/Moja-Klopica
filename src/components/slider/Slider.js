@@ -30,9 +30,7 @@ const Slider = () => {
       <button
         id="buttonLeft"
         className="slider-arrow-left"
-        onClick={() => {
-          sideScroll("left", 50, 200, 20);
-        }}
+        onClick={() => sideScroll("left", 50, 200, 20)}
       >
         <ArrowLeft />
       </button>
@@ -52,9 +50,7 @@ const Slider = () => {
       </div>
       <button
         id="buttonRight"
-        onClick={() => {
-          sideScroll("right", 50, 200, 20);
-        }}
+        onClick={() => sideScroll("right", 50, 200, 20)}
         className=" slider-arrow-right"
       >
         <ArrowRight />

@@ -38,8 +38,6 @@ function App() {
             path={`${MYRESERVATION}/:id`}
             element={<MyReservationPage />}
           />
-          {/* <Route path={`${IMPRESSIONS}/:id`} element={<RestourantImpressionsPage />} />
-          <Route path={`${GALERY}/:id`} element={<RestourantGaleryPage />} /> */}
         </Routes>
       </Router>
       <ReactQueryDevtools />

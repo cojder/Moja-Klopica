@@ -7,10 +7,10 @@ const Meni = ({ colorRed, today, setToday }) => {
   const [item, setItem] = useState([]);
   const { weekMeni } = useContext(CartContext);
 
-  const formattedDate = today.toISOString().slice(0, 10);
-
   const meniForToday = () => {
-    const meni = weekMeni?.data?.find((item) => item.date === formattedDate);
+    const meni = weekMeni?.data?.find(
+      (item) => item.date === today.toISOString().slice(0, 10)
+    );
     setItem(meni);
   };
 
@@ -38,53 +38,41 @@ const Meni = ({ colorRed, today, setToday }) => {
       <div className={colorRed ? "meniNavBar-red" : "meniNavBar"}>
         <button
           id="1"
-          onClick={() => {
-            meniForDayOfWeek(1);
-          }}
+          onClick={() => meniForDayOfWeek(1)}
           className="meniNavBar-element"
         >
           pon
         </button>
         <button
-          onClick={() => {
-            meniForDayOfWeek(2);
-          }}
+          onClick={() => meniForDayOfWeek(2)}
           id="2"
           className="meniNavBar-element"
         >
           uto
         </button>
         <button
-          onClick={() => {
-            meniForDayOfWeek(3);
-          }}
+          onClick={() => meniForDayOfWeek(3)}
           id="3"
           className="meniNavBar-element"
         >
           sre
         </button>
         <button
-          onClick={() => {
-            meniForDayOfWeek(4);
-          }}
+          onClick={() => meniForDayOfWeek(4)}
           id="4"
           className="meniNavBar-element"
         >
           cet
         </button>
         <button
-          onClick={() => {
-            meniForDayOfWeek(5);
-          }}
+          onClick={() => meniForDayOfWeek(5)}
           id="5"
           className="meniNavBar-element"
         >
           pet
         </button>
         <button
-          onClick={() => {
-            meniForDayOfWeek(6);
-          }}
+          onClick={() => meniForDayOfWeek(6)}
           id="6"
           className="meniNavBar-element"
         >
@@ -92,7 +80,7 @@ const Meni = ({ colorRed, today, setToday }) => {
         </button>
       </div>
       <div className={colorRed ? "meni-red" : "meni"}>
-        {!item || item?.meals?.length === 0 || item?.length === 0 ? (
+        {item?.meals?.length === 0 || item?.length === 0 ? (
           <div className="meni-empty">
             Dnevni meni za {today.toLocaleDateString()} jos uvek nije definisan
           </div>

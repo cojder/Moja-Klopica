@@ -20,7 +20,7 @@ const FAQ = () => {
                   ? "faq-body-header-name-arrow"
                   : "faq-body-header-name-arrow-rotate"
               }
-              onClick={() => setArrow((prevState) => !prevState)}
+              onClick={() => setArrow(!arrow)}
             >
               <Arrow />
             </div>

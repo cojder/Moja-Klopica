@@ -15,10 +15,11 @@ const MyReservation = () => {
       Orderservice.getUserOrder(localStorage.getItem("token"), true),
     retry: false,
   });
-  const formattedDate = date.toISOString().slice(0, 10);
 
   const reservationForToday = () => {
-    const meals = order?.data?.filter((item) => item.date === formattedDate);
+    const meals = order?.data?.filter(
+      (item) => item.date.slice(0, 9) === date.toLocaleDateString()
+    );
     setMeals(meals);
   };
 
@@ -39,7 +40,7 @@ const MyReservation = () => {
 
   useEffect(() => {
     reservationForToday();
-  }, []);
+  }, [order]);
 
   return (
     <div className="my-reservation">

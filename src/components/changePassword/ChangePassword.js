@@ -47,12 +47,7 @@ const ChangePassword = ({ closeModal }) => {
   };
 
   return (
-    <div
-      className="change-password"
-      onClick={() => {
-        closeModal();
-      }}
-    >
+    <div className="change-password" onClick={() => closeModal()}>
       <form
         onSubmit={submit}
         onClick={(e) => e.stopPropagation()}
