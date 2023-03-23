@@ -80,7 +80,7 @@ const Meni = ({ colorRed, today, setToday }) => {
         </button>
       </div>
       <div className={colorRed ? "meni-red" : "meni"}>
-        {item?.meals?.length === 0 || item?.length === 0 ? (
+        {!item || item?.meals?.length === 0 ? (
           <div className="meni-empty">
             Dnevni meni za {today.toLocaleDateString()} jos uvek nije definisan
           </div>
