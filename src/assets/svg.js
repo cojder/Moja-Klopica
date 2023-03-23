@@ -468,7 +468,7 @@ export const Close = () => {
   );
 };
 
-export const MyReservation = () => {
+export const MyReservationIcon = () => {
   return (
     <svg
       width="28"

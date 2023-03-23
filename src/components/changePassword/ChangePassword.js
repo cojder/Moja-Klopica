@@ -15,7 +15,7 @@ const ChangePassword = ({ closeModal }) => {
 
   const changePasswordMutate = useMutation({
     mutationFn: (data) => {
-      return UserService.updatePassword(data);
+      return UserService.updatePassword(data, localStorage.getItem("token"));
     },
     onSuccess: () => {
       closeModal();
@@ -47,12 +47,7 @@ const ChangePassword = ({ closeModal }) => {
   };
 
   return (
-    <div
-      className="change-password"
-      onClick={() => {
-        closeModal();
-      }}
-    >
+    <div className="change-password" onClick={() => closeModal()}>
       <form
         onSubmit={submit}
         onClick={(e) => e.stopPropagation()}

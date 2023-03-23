@@ -41,12 +41,7 @@ const Login = ({ setShowModal, closeModal }) => {
   };
 
   return (
-    <div
-      className="login"
-      onClick={() => {
-        closeModal();
-      }}
-    >
+    <div className="login" onClick={() => closeModal()}>
       <form
         onSubmit={handleSubmit(submit)}
         onClick={(e) => e.stopPropagation()}

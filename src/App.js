@@ -11,9 +11,11 @@ import {
   RESERVE,
   ABOUT_US,
   PROFILE,
+  MYRESERVATION,
 } from "./constants/paths";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProfilePage from "./pages/ProfilePage";
+import MyReservationPage from "./pages/MyReservationPage";
 // eslint-disable-next-line no-unused-vars
 import stylesheet from "./scss/stylesheet";
 
@@ -32,8 +34,10 @@ function App() {
           <Route path={`${RESERVE}/:id`} element={<RestourantReservePage />} />
           <Route path={ABOUT_US} element={<AboutUsPage />} />
           <Route path={`${PROFILE}/:id`} element={<ProfilePage />} />
-          {/* <Route path={`${IMPRESSIONS}/:id`} element={<RestourantImpressionsPage />} />
-          <Route path={`${GALERY}/:id`} element={<RestourantGaleryPage />} /> */}
+          <Route
+            path={`${MYRESERVATION}/:id`}
+            element={<MyReservationPage />}
+          />
         </Routes>
       </Router>
       <ReactQueryDevtools />
