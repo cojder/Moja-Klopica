@@ -4,7 +4,7 @@ import { useMutation } from "react-query";
 
 import InputField from "../input/Input";
 import { UserService } from "../../apis/User";
-import { Lock } from "../../assets/svg";
+import { Lock, Arrow } from "../../assets/svg";
 import { MAX_PASS_LENGHT, MIN_PASS_LENGHT } from "../../constants/Constants";
 
 const ChangePassword = ({ closeModal }) => {
@@ -53,6 +53,9 @@ const ChangePassword = ({ closeModal }) => {
         onClick={(e) => e.stopPropagation()}
         className="change-password-container"
       >
+        <div onClick={() => closeModal()} className="login-close">
+          <Arrow />
+        </div>
         <div className="change-password-container-header">Promeni šifru</div>
         <div className="change-password-container-input">
           {" "}

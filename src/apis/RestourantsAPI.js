@@ -28,7 +28,6 @@ export class RestourantService {
   static getTodayMeni = async (id) => {
     try {
       const response = await axios.get(`${BACKEND}/restaurant/${id}/menu`);
-      console.log(response, "RESPONSE");
       return response;
     } catch (e) {
       console.error(e);

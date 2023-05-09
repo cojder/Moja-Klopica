@@ -115,27 +115,148 @@
   }
 }
 
-@media only screen and (max-width: $bp-medium) {
+@media only screen and (max-width: $bp_largest) {
   .meni-element {
-    &-top {
+    &-img {
+      height: 230px;
+      width: 230px;
+    }
+    &-meni {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_large) {
+  .meni-element {
+    margin: 0.5rem;
+    &-img {
+      height: 200px;
+      width: 200px;
+    }
+    &-name {
+      gap: 0.7rem;
+      &-name {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &-info {
+      height: 8rem;
       font-size: 18px;
-      line-height: 30px;
-      &-price {
+      line-height: 26px;
+      margin: 1rem;
+    }
+    &-meni {
+      gap: 0.2rem;
+      font-size: 20px;
+      line-height: 35px;
+    }
+    &-reserve {
+      gap: 0.3rem;
+      margin: 1rem;
+
+      &-count {
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium-large) {
+  .meni-element {
+    margin: 0.5rem;
+    &-img {
+      height: 170px;
+      width: 170px;
+    }
+    &-name {
+      height: 6rem;
+
+      &-name {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 18px;
+      }
+    }
+    &-info {
+      height: 6rem;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0.5rem;
+    }
+    &-meni {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &-reserve {
+      margin: 0.5rem;
+
+      &-count {
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
 }
 @media only screen and (max-width: $bp-small) {
   .meni-element {
-    &-top {
-      font-size: 12px;
-      line-height: 30px;
-      &-price {
-        font-size: 10px;
-        line-height: 30px;
+    margin: 0.5rem;
+    &-img {
+      height: 150px;
+      width: 150px;
+      border-radius: 25px;
+    }
+    &-name {
+      gap: 0.5rem;
+      height: 8rem;
+      &-name {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
       }
+    }
+    &-info {
+      height: 8rem;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 1rem;
+    }
+    &-meni {
+      gap: 0;
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &-reserve {
+      gap: 0.3rem;
+      margin: 0.5rem;
+      &-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      &-count {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+    &-button-reserve {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 1rem;
+      padding: 0.5rem 3rem;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      border-radius: 20px;
     }
   }
 }

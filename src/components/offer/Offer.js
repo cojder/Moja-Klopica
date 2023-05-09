@@ -122,7 +122,7 @@ const Offer = ({ colorRed }) => {
               <div className="reserve-left">
                 <Meni today={today} setToday={setToday} colorRed />
               </div>
-              <div className="reserve-right">
+              <div className="reserve-right ">
                 <Cart today={today} />
               </div>
             </div>
@@ -130,6 +130,11 @@ const Offer = ({ colorRed }) => {
             <Meni today={today} setToday={setToday} />
           )}
         </div>
+        {colorRed && (
+          <div className="mobile-cart">
+            <Cart today={today} />
+          </div>
+        )}
       </CartContext.Provider>
     </>
   );

@@ -8,12 +8,29 @@
     gap: 1rem;
     cursor: pointer;
     &-img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50px;
+      overflow: hidden;
       &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-left {
+      margin-left: 0.8rem;
+      width: 80px;
+      height: 80px;
+
+      &-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
     &-arrow {
       margin-bottom: 0.5rem;
-      //   transform: rotate(180deg);
       &-rotate {
         margin-bottom: 0.5rem;
         transform: rotate(180deg);
@@ -24,8 +41,8 @@
   &-info {
     position: absolute;
     background: rgba(30, 30, 30, 0.3);
-    margin: 1.4rem 1rem;
-    width: 20%;
+    margin: 1.4rem 0.8rem;
+    width: 260px;
     right: 0;
     top: end;
     border-radius: 0 0 30px 30px;
@@ -54,11 +71,40 @@
     &-red {
       background-color: $color_secondary;
       position: absolute;
-      margin: 1.4rem 1rem;
-      width: 20%;
+      margin: 1.4rem 0.8rem;
+      width: 260px;
       right: 0;
       top: end;
       border-radius: 0 0 30px 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_medium) {
+  .user {
+    &-navigation {
+      margin-right: 0.8rem;
+      gap: 0.8rem;
+      cursor: pointer;
+      &-img {
+        height: 65px;
+        width: 65px;
+      }
+    }
+    &-info {
+      margin: 1.1rem 0.8rem;
+      width: 220px;
+      &-element {
+        margin: 0.8rem;
+        padding: 0.3rem;
+        font-size: 20px;
+        line-height: 33px;
+        gap: 0.3rem;
+      }
+      &-red {
+        margin: 1.1rem 0.8rem;
+        width: 220px;
+      }
     }
   }
 }

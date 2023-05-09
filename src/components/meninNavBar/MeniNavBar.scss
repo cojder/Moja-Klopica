@@ -34,3 +34,64 @@
   justify-content: space-around;
   margin: 2rem 5rem;
 }
+
+@media only screen and (max-width: $bp_largest) {
+  .meniNavBar {
+    margin: 2rem 3rem;
+    &-element {
+      font-size: 26px;
+      line-height: 34px;
+      color: $color_text_grey;
+      padding: 0.5rem 1.9rem;
+    }
+  }
+  .meniNavBar-red {
+    margin: 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: $bp_large) {
+  .meniNavBar {
+    margin: 2rem 3rem;
+    &-element {
+      font-size: 26px;
+      line-height: 34px;
+      color: $color_text_grey;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  .meniNavBar-red {
+    margin: 2rem 1rem;
+  }
+}
+
+@media only screen and (max-width: $bp_medium) {
+  .meniNavBar {
+    margin: 1rem;
+    &-element {
+      font-size: 18px;
+      line-height: 20px;
+      color: $color_text_grey;
+      padding: 0.5rem 1rem;
+    }
+  }
+  .meniNavBar-red {
+    margin: 2rem;
+  }
+}
+
+@media only screen and (max-width: $bp_small) {
+  .meniNavBar {
+    margin: 1rem;
+    &-element {
+      font-size: 16px;
+      line-height: 22px;
+      color: $color_text_grey;
+      padding: 0.9rem 0.7rem;
+      border-radius: 100%;
+    }
+  }
+  .meniNavBar-red {
+    margin: 1rem;
+  }
+}

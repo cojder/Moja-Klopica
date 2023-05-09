@@ -37,44 +37,35 @@
   }
 }
 
-@media only screen and (max-width: $bp-largest) {
-  .faq {
-    &-text {
-      font-size: 22px;
-      line-height: 30px;
-    }
-  }
-}
-
-@media only screen and (max-width: $bp-large) {
-  .faq {
-    &-text {
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
-}
-
 @media only screen and (max-width: $bp-medium) {
   .faq {
-    &-name {
-      font-size: 20px;
-      line-height: 30px;
-    }
-    &-text {
-      font-size: 14px;
+    &-body {
+      &-header {
+        &-name {
+          font-size: 20px;
+          line-height: 36px;
+        }
+      }
+      &-text {
+        font-size: 20px;
+        line-height: 36px;
+      }
     }
   }
 }
 @media only screen and (max-width: $bp-small) {
   .faq {
-    &-name {
-      font-size: 16px;
-      line-height: 24px;
-    }
-    &-text {
-      font-size: 12px;
-      line-height: 26px;
+    &-body {
+      &-header {
+        &-name {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }

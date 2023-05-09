@@ -3,7 +3,7 @@ import { useMutation } from "react-query";
 
 import { Orderservice } from "../../apis/OrderAPI";
 
-const ReseveElement = ({ meals }) => {
+const ReseveElement = ({ meals, removeMealById }) => {
   const deleteMeal = useMutation((id) =>
     Orderservice.deleteOrder(localStorage.getItem("token"), id)
   );
@@ -20,8 +20,8 @@ const ReseveElement = ({ meals }) => {
         <div key={meal.id} className="reserv-element-body">
           <div className="reserv-element-body-img">
             <img
-              className="reserv-elemen-bodyt-img-img"
-              src={meal?.img}
+              className="reserv-element-body-img-img"
+              src={meal?.mealImage}
               alt="Slilka"
             />
           </div>
@@ -38,7 +38,10 @@ const ReseveElement = ({ meals }) => {
                 {meals?.price} RSD
               </div>
               <button
-                onClick={() => deleteMeal.mutateAsync(meals.id)}
+                onClick={() => {
+                  deleteMeal.mutateAsync(meals.id);
+                  removeMealById(meals.id);
+                }}
                 className="reserv-element-body-box-bottom-button"
               >
                 otkaži rezervaciju

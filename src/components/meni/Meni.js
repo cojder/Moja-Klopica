@@ -15,7 +15,7 @@ const Meni = ({ colorRed, today, setToday }) => {
   };
 
   const meniForDayOfWeek = (dayOfWeek) => {
-    const meni = weekMeni.data.find(
+    const meni = weekMeni?.data.find(
       (item) => new Date(item.date).getDay() === dayOfWeek
     );
     setItem(meni);

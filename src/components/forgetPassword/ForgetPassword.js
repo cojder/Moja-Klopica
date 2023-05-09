@@ -66,6 +66,7 @@ const ForgetPassword = ({ setShowModal, closeModal }) => {
           onSubmit={submit}
           errorMessage={errorEmail}
           errorStyle={""}
+          id={"frogetPassword"}
         />
 
         <button

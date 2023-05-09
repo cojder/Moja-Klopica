@@ -30,3 +30,51 @@
 .meni-box {
   width: 100%;
 }
+
+@media screen and (max-width: $bp_largest) {
+  .meni {
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .meni-red {
+    gap: 1rem;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: $bp_large) {
+  .meni-red {
+    gap: 0;
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: $bp_medium_large) {
+  .meni-red {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: $bp_medium) {
+  .meni {
+    grid-template-columns: repeat(2, 1fr);
+    &-empty {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  .meni-red {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: $bp_small) {
+  .meni {
+    &-empty {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}

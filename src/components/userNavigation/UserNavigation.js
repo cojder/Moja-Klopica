@@ -30,7 +30,7 @@ const UserNavigation = ({ colorRed }) => {
       <div onClick={() => setUserInfo(!userInfo)} className="user-navigation">
         <div className="user-navigation-img">
           <img
-            className="user-navigation-img"
+            className="user-navigation-img-img"
             src={Profile}
             alt="profilePhoto"
           />

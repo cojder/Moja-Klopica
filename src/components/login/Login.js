@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useQueryClient, useMutation } from "react-query";
 
-import { Email, Lock } from "../../assets/svg";
+import { Email, Lock, Arrow } from "../../assets/svg";
 import { UserService } from "../../apis/User";
 import InputField from "../input/Input";
 
@@ -47,6 +47,9 @@ const Login = ({ setShowModal, closeModal }) => {
         onClick={(e) => e.stopPropagation()}
         className="login-container"
       >
+        <div onClick={() => closeModal()} className="login-close">
+          <Arrow />
+        </div>
         <div className="login-container-header">Ulogujte se</div>
         <div className="login-container-input">
           <InputField

@@ -11,7 +11,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
 
   &-left {
@@ -34,25 +34,40 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin: 1rem;
+    margin: 0.7rem;
     &-aboutus {
       text-decoration: none;
       color: white;
-      margin: 1rem;
+      margin: 0.7rem;
     }
     &-copy {
-      margin: 1rem;
+      margin: 0.7rem;
     }
   }
 }
 
 @media only screen and (max-width: $bp-medium) {
   .footer {
-    &-top {
-      &-left {
-        &-img {
-          display: none;
-        }
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    &-left {
+      &-logo {
+        height: 60px;
+        width: 60px;
+        margin: 0.5rem;
+      }
+      &-icon {
+        margin: 0 0.5rem;
+      }
+    }
+    &-right {
+      margin: 0.5rem;
+      &-aboutus {
+        margin: 0.5rem;
+      }
+      &-copy {
+        margin: 0.5rem;
       }
     }
   }
@@ -60,44 +75,31 @@
 
 @media only screen and (max-width: $bp-small) {
   .footer {
-    &-top {
-      &-left {
-        scale: 0.7;
-        &-img {
-          display: none;
-        }
-      }
-      &-right {
-        font-weight: 200;
-        font-size: 10px;
-        line-height: 16px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    background-color: white;
+    color: $color_dark;
+    border-top: none;
+    justify-content: center;
+    margin: 1rem 0;
 
-        &-icon {
-          scale: 0.5;
-          padding-right: 0.5rem;
-        }
+    &-left {
+      &-logo {
+        display: none;
       }
-    }
-    &-bottom {
-      font-weight: 200;
-      font-size: 10px;
-      line-height: 16px;
-
-      &-left {
-        gap: 0.2rem;
-      }
-
-      &-right {
-        gap: 0.5rem;
+      &-icon {
+        margin: 0 0.5rem;
       }
     }
-  }
-}
-
-@media only screen and (max-width: $bp-smaller) {
-  .footer {
-    &-bottom {
-      font-size: 8px;
+    &-right {
+      margin: 0.5rem;
+      &-aboutus {
+        display: none;
+      }
+      &-copy {
+        margin: 0.5rem;
+      }
     }
   }
 }

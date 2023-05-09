@@ -58,3 +58,86 @@
     align-self: flex-start;
   }
 }
+
+@media only screen and (max-width: $bp_large) {
+  .my-reservation {
+    font-size: 30px;
+    line-height: 42px;
+
+    &-message {
+      font-size: 24px;
+      line-height: 35px;
+    }
+    &-navbar {
+      &-element {
+        margin: 0.5rem;
+        font-size: 28px;
+        line-height: 38px;
+
+        padding: 0.5rem 2rem;
+      }
+    }
+    &-date {
+      font-size: 24px;
+      line-height: 38px;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_medium) {
+  .my-reservation {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    &-message {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &-navbar {
+      margin: 1rem;
+      &-element {
+        margin: 0.3rem;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    &-date {
+      font-size: 18px;
+      line-height: 35px;
+    }
+    &-empty {
+      margin-bottom: 25rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_small) {
+  .my-reservation {
+    font-size: 16px;
+    line-height: 24px;
+    &-message {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &-navbar {
+      &-element {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 1rem 0.76rem;
+        border-radius: 100%;
+      }
+    }
+    &-date {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    &-empty {
+      margin-bottom: 28rem;
+    }
+  }
+}

@@ -9,16 +9,17 @@ const date = new Date();
 const MyReservation = () => {
   const [meals, setMeals] = useState([]);
   const [today, setToday] = useState(date);
-  const { data: order } = useQuery({
+  const { data: order, reset } = useQuery({
     queryKey: "userOrder",
     queryFn: () =>
       Orderservice.getUserOrder(localStorage.getItem("token"), true),
     retry: false,
   });
+  // const [mealsOrder, setMealsOrder] = useState(order);
 
   const reservationForToday = () => {
     const meals = order?.data?.filter(
-      (item) => item.date.slice(0, 9) === date.toLocaleDateString()
+      (item) => item.date.slice(0, 8) === date.toLocaleDateString()
     );
     setMeals(meals);
   };
@@ -36,6 +37,12 @@ const MyReservation = () => {
     order?.date === undefined
       ? setToday(new Date(nextDate))
       : setToday(new Date(order?.date));
+  };
+
+  const removeMealById = (id) => {
+    const meals = order?.data?.filter((item) => item?.id !== id);
+    setMeals(meals);
+    reset();
   };
 
   useEffect(() => {
@@ -88,7 +95,13 @@ const MyReservation = () => {
       </div>
       <div className="my-reservation-date">{today.toLocaleDateString()}</div>
       {meals?.length ? (
-        meals.map((meals) => <ReseveElement key={meals.id} meals={meals} />)
+        meals.map((meals) => (
+          <ReseveElement
+            removeMealById={removeMealById}
+            key={meals.id}
+            meals={meals}
+          />
+        ))
       ) : (
         <div className="my-reservation-empty">
           Nema rezervacija za ovaj datum

@@ -19,7 +19,11 @@ const MeinElement = ({ date, items }) => {
   return (
     <div key={items?.id} className="meni-element">
       <div className="meni-element-img">
-        <img className="meni-element-img-img" src={Food} alt={"slika"} />
+        <img
+          className="meni-element-img-img"
+          src={items?.image}
+          alt={"slika"}
+        />
       </div>
       <div className="meni-element-name">
         <div className="meni-element-name-name">{items?.title}</div>
@@ -34,7 +38,7 @@ const MeinElement = ({ date, items }) => {
       </div>
       {arrow && <div className="meni-element-info">{items?.description}</div>}
       <div className="meni-element-meni">
-        <div className="meni-element-meni-meni">{items?.type?.name} - </div>
+        <div className="meni-element-meni-meni">{items?.type?.name}- </div>
         <div className="meni-element-meni-price"> {items?.price} </div>
       </div>
       {window.location.pathname !== "/" && (

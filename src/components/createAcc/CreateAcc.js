@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useQueryClient, useMutation } from "react-query";
 
-import { Email, Person, Lock, Phone2 } from "../../assets/svg";
+import { Email, Person, Lock, Phone2, Arrow } from "../../assets/svg";
 import InputField from "../input/Input";
 import { UserService } from "../../apis/User";
 import {
@@ -78,6 +78,9 @@ const CreateAcc = ({ setShowModal, closeModal }) => {
         onClick={(e) => e.stopPropagation()}
         className="create-acc-container"
       >
+        <div className="create-acc-close" onClick={() => closeModal()}>
+          <Arrow />
+        </div>
         <div className="create-acc-container-header">Registruj se</div>
         <div className="create-acc-container-input">
           <InputField

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 
 import { Bin } from "../../assets/svg";
 import { CartContext } from "../offer/Offer";
-import Food from "../../assets/Food.png";
 
 const CartELement = ({ total }) => {
   const { cartItems, removeItemFrommCart, updateItemQuantity } =
@@ -16,7 +15,7 @@ const CartELement = ({ total }) => {
             <div className="cart-element-container-img">
               <img
                 className="cart-element-container-img-img"
-                src={Food}
+                src={item?.image}
                 alt="slika"
               />
             </div>

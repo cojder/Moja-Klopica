@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery, QueryClient } from "react-query";
 
 import logo from "../../assets/Logo.png";
 import { RESERVE, ABOUT_US } from "../../constants/paths";
 import UserNavigation from "../userNavigation/UserNavigation";
+import Sidebar from "../sidebar/Sidebar";
 
 const Navigationbar = ({ colorRed }) => {
   const { data: user } = useQuery("userLogin");
+  const [sidebar, setSidebar] = useState(false);
 
   // const queryClient = QueryClient();
 
@@ -15,9 +17,15 @@ const Navigationbar = ({ colorRed }) => {
 
   return (
     <div className={colorRed ? "first-red" : "first"}>
+      <div className="menue" onClick={() => setSidebar(true)}>
+        <div
+          className={colorRed ? "menue-style menue-red" : "menue-style"}
+        ></div>
+      </div>
+      {sidebar && <Sidebar onBackdropClick={() => setSidebar(false)} />}
       <div className="navigationbar">
         <div className="navigationbar-left">
-          <img className="navigationbar-logo" src={logo} alt="logo" />
+          <img className="navigationbar-left-logo" src={logo} alt="logo" />
         </div>
         <div className="navigationbar-right">
           <Link

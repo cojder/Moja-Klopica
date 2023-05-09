@@ -46,3 +46,53 @@
     }
   }
 }
+
+@media only screen and (max-width: $bp_medium_large) {
+  .aboutus-navbar {
+    margin: 2rem 0.5rem;
+    &-element {
+      width: 215px;
+      &-red {
+        width: 215px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_medium) {
+  .aboutus-navbar {
+    margin: 1.3rem 0.3rem;
+    &-element {
+      width: 153px;
+      font-size: 17px;
+      line-height: 26px;
+      &-red {
+        width: 153px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp_small) {
+  .aboutus-navbar {
+    margin: 1.3rem 0.3rem;
+
+    &-element {
+      width: 85px;
+      height: 20px;
+      font-weight: 600;
+      font-size: 9px;
+      line-height: 20px;
+
+      &-red {
+        width: 85px;
+        height: 20px;
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 20px;
+      }
+    }
+  }
+}
